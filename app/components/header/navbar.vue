@@ -1,237 +1,271 @@
 <template>
-  <nav class="fixed top-0 left-0 right-0 z-[100] bg-[#001151] shadow-xl">
-    <!-- ... (Navbar code remains the same as previous) ... -->
-    <div class="container mx-auto px-4">
-      <div class="flex items-center justify-between h-20">
-        <!-- Logo Area -->
-        <div class="relative z-[110] flex items-center">
-          <NuxtLink :to="resolveUrl('/')" class="flex items-center gap-3 py-4 group">
-            <div class="flex w-10 h-10 items-center justify-center">
-              <img v-if="siteConfig?.logoUrl" :src="siteConfig.logoUrl" alt="Company Logo" class="w-full h-full object-contain">
-              <div v-else class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">L</div>
-            </div>
-            <span class="text-2xl font-extrabold text-white tracking-tight uppercase">{{ siteConfig?.logoName || 'GLOBAL TRADE' }}</span>
-          </NuxtLink>
-        </div>
-
-        <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center space-x-1 lg:space-x-4">
-          <div v-for="(item, index) in navItems" :key="index" class="relative group">
-            <NuxtLink :to="resolveUrl(item.href)" class="text-white/90 hover:text-blue-400 transition-all flex items-center px-4 py-2 rounded-md hover:bg-white/5 font-medium text-sm lg:text-base">
-              {{ item.label }}
-              <span v-if="item.hasDropdown" class="ml-1 flex items-center group-hover:rotate-180 transition-transform duration-300">
-                <ChevronDown class="w-4 h-4 opacity-50" />
-              </span>
-            </NuxtLink>
-            <!-- Dropdown code... -->
-          </div>
-        </div>
-
-        <!-- Desktop CTA Button -->
-        <div class="hidden md:flex items-center">
-          <button @click="isModalOpen = true"
-            class="group/btn relative bg-white text-[#001151] px-7 py-3 rounded-full font-bold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(255,255,255,0.15)] flex items-center gap-2 overflow-hidden">
-            <span class="absolute inset-0 bg-blue-50 opacity-0 group-hover/btn:opacity-100 transition-opacity"></span>
-            <span class="relative z-10 text-sm uppercase tracking-wider">Inquiry Now</span>
-            <ArrowRight class="relative z-10 w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-          </button>
-        </div>
-
-        <!-- Mobile Menu Toggle Button (code...) -->
-      </div>
-    </div>
-
-    <!-- Inquiry Modal -->
-    <Teleport to="body">
-      <div v-if="isModalOpen" class="fixed inset-0 z-[200] flex items-center justify-center p-4">
-        <!-- Backdrop -->
-        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" @click="isModalOpen = false"></div>
-
-        <!-- Modal Content -->
-        <div class="relative bg-white w-full max-w-md rounded-[2.5rem] shadow-2xl overflow-hidden animate-modal-in">
-          
-          <!-- Header -->
-          <div class="bg-[#001151] px-8 py-8 text-white relative">
-            <button @click="isModalOpen = false" class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors">
-              <X class="w-6 h-6" />
-            </button>
-            <div class="flex items-center gap-4">
-              <div class="bg-blue-500 p-3 rounded-2xl shadow-lg shadow-blue-900/20">
-                <Mail class="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 class="text-2xl font-bold tracking-tight">Send Inquiry</h3>
-                <p class="text-blue-200 text-sm mt-1">Get a quote within 24 hours</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Form Body -->
-          <form @submit.prevent="handleSubmit" class="p-8 space-y-5">
-            <!-- Name -->
-            <div class="space-y-1.5">
-              <label class="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Full Name</label>
-              <input v-model="form.name" required type="text" placeholder="Your name"
-                class="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl px-5 py-3.5 focus:bg-white focus:border-blue-600 outline-none transition-all" />
-            </div>
-
-            <!-- Email -->
-            <div class="space-y-1.5">
-              <label class="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Email Address</label>
-              <input v-model="form.email" required type="email" placeholder="example@company.com"
-                class="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl px-5 py-3.5 focus:bg-white focus:border-blue-600 outline-none transition-all" />
-            </div>
-
-            <!-- Message -->
-            <div class="space-y-1.5">
-              <label class="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Message</label>
-              <textarea v-model="form.message" required rows="3" placeholder="Tell us about your requirements..."
-                class="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl px-5 py-3.5 focus:bg-white focus:border-blue-600 outline-none transition-all resize-none"></textarea>
-            </div>
-
-            <!-- Captcha -->
-            <div class="space-y-1.5">
-              <label class="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Security Code</label>
-              <div class="flex gap-3">
-                <input v-model="captchaInput" required type="text" placeholder="Enter code"
-                  class="flex-1 bg-slate-50 border-2 border-slate-100 rounded-2xl px-5 py-3 focus:border-blue-600 outline-none" />
-                <div @click="refreshCaptcha" class="bg-slate-100 rounded-2xl cursor-pointer hover:bg-slate-200 transition-colors flex items-center justify-center min-w-[100px] border-2 border-slate-100 overflow-hidden px-2 py-1">
-                  <!-- Placeholder for Captcha Image -->
-                  <span class="text-blue-900 font-mono font-bold tracking-tighter select-none">{{ currentCaptcha }}</span>
+    <nav :class="[
+        'fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]',
+        isScrolled
+            ? 'bg-[#001151]/70 backdrop-blur-xl border-b border-white/10 shadow-lg py-2'
+            : 'bg-[#001151] py-5'
+    ]">
+        <!-- ... (Navbar code remains the same as previous) ... -->
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo Area -->
+                <div class="transition-all duration-500" :class="isScrolled ? 'scale-90' : 'scale-100'">
+                    <NuxtLink to="/" class="flex items-center gap-3 py-4 group">
+                        <div class="flex w-10 h-10 items-center justify-center">
+                            <img v-if="siteConfig?.logoUrl" :src="siteConfig.logoUrl" alt="Company Logo"
+                                class="w-full h-full object-contain">
+                        </div>
+                        <span class="text-2xl font-extrabold text-white tracking-tight uppercase">{{
+                            siteConfig?.logoName }}</span>
+                    </NuxtLink>
                 </div>
-              </div>
-            </div>
 
-            <!-- Submit Button -->
-            <button :disabled="isSubmitting" type="submit"
-              class="w-full bg-[#001151] text-white py-4 rounded-2xl font-bold text-lg hover:bg-blue-900 transition-all flex items-center justify-center gap-3 disabled:opacity-50 active:scale-[0.98] shadow-xl shadow-blue-100 mt-2 group">
-              <template v-if="isSubmitting">
-                <Loader2 class="w-5 h-5 animate-spin" />
-                <span>Sending...</span>
-              </template>
-              <template v-else>
-                <span>Submit Inquiry</span>
-                <Send class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </template>
-            </button>
-          </form>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center h-full space-x-1 lg:space-x-4">
+                    <div v-for="(item, index) in navItems" :key="index" class="relative group h-full flex items-center">
+                        <!-- 导航项 -->
+                        <NuxtLink :to="item.href"
+                            class="text-white/90 hover:text-blue-400 transition-all px-4 py-2 rounded-md hover:bg-white/5 font-medium text-sm lg:text-base flex items-center gap-1">
+                            {{ item.label }}
+                            <ChevronDown v-if="item.hasDropdown"
+                                class="w-4 h-4 opacity-50 group-hover:rotate-180 transition-transform duration-300" />
+                        </NuxtLink>
+
+                        <!-- Dropdown Menu - 核心修改点 -->
+                        <div v-if="item.hasDropdown" class="absolute top-[100%] left-0 w-48 bg-white/95 backdrop-blur-sm text-slate-800 rounded-xl shadow-2xl py-2 
+           opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+           transition-all duration-300 transform translate-y-4 group-hover:translate-y-1 
+           border border-slate-100/50 z-[200]">
+
+                            <!-- 加一个小的透明连接层，防止鼠标移走 -->
+                            <div class="absolute -top-4 left-0 w-full h-4"></div>
+
+                            <NuxtLink v-for="(subItem, subIndex) in item.subItems" :key="subIndex" :to="subItem.href"
+                                class="block px-5 py-3 text-sm hover:bg-blue-50 hover:text-blue-700 transition-colors border-b border-slate-50 last:border-b-0 font-medium">
+                                {{ subItem.label }}
+                            </NuxtLink>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <NuxtLink to="/contact"
+                        class="relative inline-flex items-center gap-2 px-7 py-3 rounded-md font-bold transition-colors duration-300 bg-white text-[#001151] hover:bg-slate-200/90 active:scale-[0.98]">
+
+                        <span class="text-sm uppercase tracking-wider">Inquiry Now</span>
+
+                        <ArrowRight class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    </NuxtLink>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen"
+                        class="text-white p-2 rounded-lg hover:bg-white/10 transition-colors focus:outline-none"
+                        aria-label="Toggle Menu">
+                        <!-- 使用 lucide-vue-next 的图标，或者你原来的 UIcon -->
+                        <X v-if="mobileMenuOpen" class="w-8 h-8" />
+                        <svg v-else xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Mobile Menu Toggle Button (code...) -->
+                <!-- Mobile Menu Overlay -->
+                <!-- 移动端菜单容器：使用 fixed 覆盖全屏，背景色与导航栏一致 -->
+                <Transition enter-active-class="transition-opacity duration-300" enter-from-class="opacity-0"
+                    enter-to-class="opacity-100" leave-active-class="transition-opacity duration-300"
+                    leave-from-class="opacity-100" leave-to-class="opacity-0">
+
+                    <div v-if="mobileMenuOpen"
+                        class="md:hidden fixed top-22 left-0 right-0 bottom-0 z-[99] bg-[#001151] backdrop-blur-xl overflow-y-auto">
+
+                        <div class="container mx-auto px-6">
+                            <div v-for="(item, index) in navItems" :key="index"
+                                class="border-b border-white/10 last:border-0">
+                                <div class="flex items-center justify-between py-5">
+                                    <NuxtLink :to="item.href" @click="mobileMenuOpen = false"
+                                        class="text-white hover:text-blue-300 font-bold text-xl transition-colors">
+                                        {{ item.label }}
+                                    </NuxtLink>
+
+                                    <button v-if="item.hasDropdown" @click="toggleMobileDropdown(index)"
+                                        class="p-2 text-white/50">
+                                        <ChevronDown :class="{ 'rotate-180': mobileDropdowns[index] }"
+                                            class="w-6 h-6 transition-transform" />
+                                    </button>
+                                </div>
+
+                                <!-- 下拉列表 -->
+                                <div v-if="item.hasDropdown && mobileDropdowns[index]" class="pb-6 pl-4 space-y-4">
+                                    <NuxtLink v-for="(subItem, subIndex) in item.subItems" :key="subIndex"
+                                        :to="subItem.href" @click="mobileMenuOpen = false"
+                                        class="block text-white/70 hover:text-white font-medium text-lg border-l-2 border-white/20 pl-4 py-1">
+                                        {{ subItem.label }}
+                                    </NuxtLink>
+                                </div>
+                            </div>
+
+                            <!-- CTA 按钮优化 -->
+                            <div class="mt-10 w-full">
+                                <NuxtLink to="/contact" @click="mobileMenuOpen = false"
+                                    class="flex w-full items-center justify-center bg-white text-[#001151] py-4 rounded-xl font-bold text-lg active:scale-[0.98] transition-transform">
+                                    Inquiry Now
+                                </NuxtLink>
+                            </div>
+                        </div>
+                    </div>
+                </Transition>
+            </div>
         </div>
-      </div>
-    </Teleport>
-  </nav>
+
+    </nav>
 </template>
 
 <script setup lang="ts">
+
 import { ref, onMounted, reactive } from 'vue'
-import { 
-  X, Mail, Send, Loader2, ChevronDown, 
-  ChevronRight, ArrowRight, Home 
+import {
+    X, Mail, Send, Loader2, ChevronDown,
+    ChevronRight, ArrowRight, Home
 } from 'lucide-vue-next'
+const isScrolled = ref(false)
+let ticking = false;
+const handleScroll = () => {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            isScrolled.value = window.scrollY > 20
+            ticking = false
+        })
+        ticking = true
+    }
+}
 
 // --- 1. 基础状态定义 ---
-const isModalOpen = ref(false)
-const isSubmitting = ref(false)
+// const isModalOpen = ref(false)
+
 const mobileMenuOpen = ref(false)
 const mobileDropdowns = ref<Record<number, boolean>>({})
-const captchaInput = ref('')
-const currentCaptcha = ref('8K2W')
+
 
 const siteConfig = ref({
-  logoName: 'EX-EXPORT',
-  logoUrl: '',
-  navItems: []
+    logoName: '',
+    logoUrl: '',
+
 })
 
-const form = reactive({
-  name: '',
-  email: '',
-  message: ''
-})
 
-// --- 2. 核心：路径解析函数 (必须定义这个才能修复你的报错) ---
-const route = useRoute() // 必须引入 Nuxt 的路由
-const props = defineProps({
-  navItems: {
-    type: Array as any,
-    default: () => [
-      { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products', hasDropdown: true, subItems: [
-        { label: 'Industrial', href: '/products/industrial' },
-        { label: 'Electronics', href: '/products/electronics' }
-      ]},
-      { label: 'About', href: '/about' },
-      { label: 'Contact', href: '/contact' }
+
+
+
+const { data: navData } = await useProductsNav()
+// 2. 确保计算属性安全读取
+const navItems = computed(() => {
+    // 1. 安全获取数据
+    const rootNode = navData.value?.[0]
+    if (!rootNode) {
+        // 如果数据还没回来，返回基础菜单，防止页面空白
+        return [
+            { label: 'Home', href: '/' },
+            { label: 'About', href: '/about' },
+            { label: 'Contact', href: '/contact' }
+        ]
+    }
+
+    // 2. 将 Content 树形结构映射为你的导航格式
+    // 你的数据结构是: root(Products) -> children(Industrial, Electronics)
+    const productMenu = {
+        label: rootNode.title, // "Products"
+        href: rootNode.path,   // "/products"
+        hasDropdown: true,
+        subItems: rootNode.children?.map(child => ({
+            label: child.title, // "Industrial"
+            href: child.path    // "/products/industrial"
+        })) || []
+    }
+
+    // 3. 组合菜单
+    return [
+        { label: 'Home', href: '/' },
+        productMenu,
+        { label: 'About', href: '/about' },
+        { label: 'Contact', href: '/contact' }
     ]
-  },
-  isTemplateMode: { type: Boolean, default: true }
 })
 
-// 这个函数就是报错的主角，请务必包含
-const resolveUrl = (href: string) => {
-  // 如果是外部链接或锚点，直接返回
-  if (!href || href.startsWith('http') || href === '#') return href
-  
-  // 如果在模板详情页模式下，需要拼接路径
-  if (props.isTemplateMode && route.params.detail) {
-    const templateSlug = route.params.detail
-    const cleanHref = href.startsWith('/') ? href.slice(1) : href
-    return `/template/${templateSlug}/${cleanHref}`
-  }
-  
-  return href
-}
 
 // --- 3. 其他功能函数 ---
 const toggleMobileDropdown = (index: number) => {
-  mobileDropdowns.value[index] = !mobileDropdowns.value[index]
+    mobileDropdowns.value[index] = !mobileDropdowns.value[index]
 }
 
-const refreshCaptcha = () => {
-  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
-  let result = ''
-  for (let i = 0; i < 4; i++) result += chars.charAt(Math.floor(Math.random() * chars.length))
-  currentCaptcha.value = result
-}
 
-const handleSubmit = async () => {
-  if (captchaInput.value.toUpperCase() !== currentCaptcha.value) {
-    alert("Invalid Captcha!")
-    return
-  }
-  isSubmitting.value = true
-  await new Promise(resolve => setTimeout(resolve, 1500))
-  isSubmitting.value = false
-  isModalOpen.value = false
-  alert("Inquiry Sent!")
-}
+watch(mobileMenuOpen, (isOpen) => {
+    if (typeof window !== 'undefined') {
+        if (isOpen) {
+            // 禁止 body 滚动
+            document.body.style.overflow = 'hidden'
+            document.body.style.position = 'fixed'
+            document.body.style.width = '100%'
+        } else {
+            // 恢复 body 滚动
+            document.body.style.overflow = ''
+            document.body.style.position = ''
+            document.body.style.width = ''
+        }
+    }
+})
+
 
 onMounted(async () => {
-  try {
-    const response = await fetch('/setting.json')
-    if (response.ok) {
-      const data = await response.json()
-      siteConfig.value = { ...siteConfig.value, ...data }
+    try {
+        const response = await fetch('/setting.json')
+        if (response.ok) {
+            const data = await response.json()
+            siteConfig.value = { ...siteConfig.value, ...data }
+        }
+    } catch (e) {
+        console.warn("Setting.json not found")
     }
-  } catch (e) {
-    console.warn("Setting.json not found")
-  }
+    window.addEventListener('scroll', handleScroll)
+})
+onUnmounted(() => {
+    // 记得销毁监听，防止内存泄漏
+    window.removeEventListener('scroll', handleScroll)
 })
 </script>
 
 <style scoped>
 @keyframes modalIn {
-  from { opacity: 0; transform: scale(0.9) translateY(20px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
 }
+
 .animate-modal-in {
-  animation: modalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: modalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-slide-in {
-  animation: slideIn 0.3s ease-out forwards;
+    animation: slideIn 0.3s ease-out forwards;
 }
+
 @keyframes slideIn {
-  from { opacity: 0; transform: translateX(-15px); }
-  to { opacity: 1; transform: translateX(0); }
+    from {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 </style>

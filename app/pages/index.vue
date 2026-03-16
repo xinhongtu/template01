@@ -1,6 +1,7 @@
 <template>
-  <div>1
-    
+  <div>
+    <HeroBlock />
+    <div class="h-100">122</div>
   </div>
 </template>
 

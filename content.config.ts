@@ -1,10 +1,11 @@
+// content.config.ts
 import { defineContentConfig, defineCollection } from '@nuxt/content'
 
 export default defineContentConfig({
   collections: {
-    content: defineCollection({
+    products: defineCollection({
       type: 'page',
-      source: '**',
+      source: 'products/**/*.md', // 确保能匹配到 products 文件夹内的所有 .md
     }),
   },
 })

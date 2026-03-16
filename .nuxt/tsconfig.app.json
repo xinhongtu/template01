@@ -31,6 +31,9 @@
       "vite/client": [
         "../node_modules/vite/client"
       ],
+      "@nuxtjs/mdc": [
+        "../node_modules/@nuxtjs/mdc"
+      ],
       "nuxt-site-config": [
         "../node_modules/nuxt-site-config"
       ],
@@ -57,6 +60,12 @@
       ],
       "crossws": [
         "../node_modules/crossws"
+      ],
+      "#content/components": [
+        "./content/components"
+      ],
+      "#content/manifest": [
+        "./content/manifest"
       ],
       "~": [
         "../app"
@@ -124,6 +133,15 @@
       "#imports": [
         "./imports"
       ],
+      "#mdc-configs": [
+        "./mdc-configs"
+      ],
+      "#mdc-highlighter": [
+        "./mdc-highlighter"
+      ],
+      "#mdc-imports": [
+        "./mdc-imports"
+      ],
       "#app-manifest": [
         "./manifest/meta/dev"
       ],
@@ -183,10 +201,12 @@
   "exclude": [
     "../node_modules",
     "../node_modules/nuxt/node_modules",
+    "../node_modules/@nuxt/content/node_modules",
     "../node_modules/nuxt-site-config/node_modules",
     "../node_modules/@nuxtjs/sitemap/node_modules",
     "../node_modules/@nuxt/devtools/node_modules",
     "../node_modules/@nuxt/telemetry/node_modules",
+    "../node_modules/@nuxtjs/mdc/node_modules",
     "../dist",
     "../.data",
     "../modules/*/runtime/server/**/*",
@@ -198,14 +218,14 @@
     "../layers/*/nuxt.config.*",
     "../layers/*/.config/nuxt.*",
     "../layers/*/modules/**/*",
-    "../node_modules/nuxt-site-config/dist/runtime/server",
-    "../node_modules/nuxt-site-config/dist/dist/runtime/server",
-    "../node_modules/nuxt-site-config/dist/*.*",
-    "../node_modules/nuxt-site-config/dist/dist/*.*",
     "../node_modules/runtime/server",
     "../node_modules/dist/runtime/server",
     "../node_modules/*.*",
     "../node_modules/dist/*.*",
+    "../node_modules/nuxt-site-config/dist/runtime/server",
+    "../node_modules/nuxt-site-config/dist/dist/runtime/server",
+    "../node_modules/nuxt-site-config/dist/*.*",
+    "../node_modules/nuxt-site-config/dist/dist/*.*",
     "dev",
     "../server"
   ],

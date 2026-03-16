@@ -1,7 +1,7 @@
 <template>
     <NuxtLoadingIndicator :duration="1000" :throttle="0" :height="5"></NuxtLoadingIndicator>
    <HeaderNavbar/>
-    <div>
+    <div >
         <slot />
     </div>
     <!-- 页脚 -->

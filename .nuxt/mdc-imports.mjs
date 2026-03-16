@@ -1,0 +1,12 @@
+import _RemarkEmoji from 'remark-emoji'
+import _Highlight from '/Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/@nuxtjs/mdc/dist/runtime/highlighter/rehype-nuxt.js'
+
+export const remarkPlugins = {
+  'remark-emoji': { instance: _RemarkEmoji },
+}
+
+export const rehypePlugins = {
+  'highlight': { instance: _Highlight, options: {} },
+}
+
+export const highlight = {"theme":{"default":"github-light","dark":"github-dark"}}
