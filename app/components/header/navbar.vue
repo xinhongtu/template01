@@ -2,7 +2,7 @@
     <nav :class="[
         'fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]',
         isScrolled
-            ? 'bg-[#001151]/70 backdrop-blur-xl border-b border-white/10 shadow-lg '
+            ? 'bg-[#001151]/85 backdrop-blur-xl border-b border-white/10 shadow-lg '
             : 'bg-[#001151] py-2'
     ]">
         <!-- ... (Navbar code remains the same as previous) ... -->

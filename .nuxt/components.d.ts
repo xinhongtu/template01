@@ -19,6 +19,7 @@ export const Counter: typeof import("../app/components/Counter.vue")['default']
 export const TheToast: typeof import("../app/components/TheToast.vue")['default']
 export const HeaderNavbar: typeof import("../app/components/header/navbar.vue")['default']
 export const HeroBlock: typeof import("../app/components/hero/block.vue")['default']
+export const ServiceBlock: typeof import("../app/components/service/block.vue")['default']
 export const ProseA: typeof import("../node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseA.vue")['default']
 export const ProseBlockquote: typeof import("../node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseBlockquote.vue")['default']
 export const ProseCode: typeof import("../node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseCode.vue")['default']
@@ -78,6 +79,7 @@ export const LazyCounter: LazyComponent<typeof import("../app/components/Counter
 export const LazyTheToast: LazyComponent<typeof import("../app/components/TheToast.vue")['default']>
 export const LazyHeaderNavbar: LazyComponent<typeof import("../app/components/header/navbar.vue")['default']>
 export const LazyHeroBlock: LazyComponent<typeof import("../app/components/hero/block.vue")['default']>
+export const LazyServiceBlock: LazyComponent<typeof import("../app/components/service/block.vue")['default']>
 export const LazyProseA: LazyComponent<typeof import("../node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseA.vue")['default']>
 export const LazyProseBlockquote: LazyComponent<typeof import("../node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseBlockquote.vue")['default']>
 export const LazyProseCode: LazyComponent<typeof import("../node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseCode.vue")['default']>

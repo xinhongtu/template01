@@ -1,6 +1,7 @@
 <template>
   <div>
     <HeroBlock />
+    <ServiceBlock />
     <div class="h-100">122</div>
   </div>
 </template>

@@ -19,6 +19,7 @@ interface _GlobalComponents {
   TheToast: typeof import("../../app/components/TheToast.vue")['default']
   HeaderNavbar: typeof import("../../app/components/header/navbar.vue")['default']
   HeroBlock: typeof import("../../app/components/hero/block.vue")['default']
+  ServiceBlock: typeof import("../../app/components/service/block.vue")['default']
   ProseA: typeof import("../../node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseA.vue")['default']
   ProseBlockquote: typeof import("../../node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseBlockquote.vue")['default']
   ProseCode: typeof import("../../node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseCode.vue")['default']
@@ -78,6 +79,7 @@ interface _GlobalComponents {
   LazyTheToast: LazyComponent<typeof import("../../app/components/TheToast.vue")['default']>
   LazyHeaderNavbar: LazyComponent<typeof import("../../app/components/header/navbar.vue")['default']>
   LazyHeroBlock: LazyComponent<typeof import("../../app/components/hero/block.vue")['default']>
+  LazyServiceBlock: LazyComponent<typeof import("../../app/components/service/block.vue")['default']>
   LazyProseA: LazyComponent<typeof import("../../node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseA.vue")['default']>
   LazyProseBlockquote: LazyComponent<typeof import("../../node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseBlockquote.vue")['default']>
   LazyProseCode: LazyComponent<typeof import("../../node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseCode.vue")['default']>
