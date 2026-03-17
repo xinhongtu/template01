@@ -10,37 +10,37 @@ declare module "nitropack/types" {
       'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/submit.post').default>>>>
     }
     '/__nuxt_error': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/nitro-server/dist/runtime/handlers/renderer').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+nitro-server@4.4.2_@babel+core@7.29.0_better-sqlite3@12.8.0_db0@0.3.4_better-sqli_c916226fcf78f8c4221bbe74a16f7d05/node_modules/@nuxt/nitro-server/dist/runtime/handlers/renderer').default>>>>
     }
     '/__nuxt_island/**': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/#internal/nuxt/island-renderer').default>>>>
     }
     '/__site-config__/debug.json': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nuxt-site-config/dist/runtime/server/routes/__site-config__/debug').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser_fce97e60baf73fab57ba9205268ef960/node_modules/nuxt-site-config/dist/runtime/server/routes/__site-config__/debug').default>>>>
     }
     '/__sitemap__/nuxt-content-urls.json': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxtjs/sitemap/dist/runtime/server/routes/__sitemap__/nuxt-content-urls-v3').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxtjs+sitemap@7.6.0_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser@5_6c1a7619ade65506d741f3a1e35e4bd5/node_modules/@nuxtjs/sitemap/dist/runtime/server/routes/__sitemap__/nuxt-content-urls-v3').default>>>>
     }
     '/__sitemap__/debug.json': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxtjs/sitemap/dist/runtime/server/routes/__sitemap__/debug').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxtjs+sitemap@7.6.0_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser@5_6c1a7619ade65506d741f3a1e35e4bd5/node_modules/@nuxtjs/sitemap/dist/runtime/server/routes/__sitemap__/debug').default>>>>
     }
     '/__sitemap__/style.xsl': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxtjs/sitemap/dist/runtime/server/routes/sitemap.xsl').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxtjs+sitemap@7.6.0_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser@5_6c1a7619ade65506d741f3a1e35e4bd5/node_modules/@nuxtjs/sitemap/dist/runtime/server/routes/sitemap.xsl').default>>>>
     }
     '/sitemap.xml': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxtjs/sitemap/dist/runtime/server/routes/sitemap.xml').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxtjs+sitemap@7.6.0_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser@5_6c1a7619ade65506d741f3a1e35e4bd5/node_modules/@nuxtjs/sitemap/dist/runtime/server/routes/sitemap.xml').default>>>>
     }
     '/__nuxt_content/products/sql_dump.txt': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/presets/node/database-handler').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@3.12.0_better-sqlite3@12.8.0_magicast@0.5.2/node_modules/@nuxt/content/dist/runtime/presets/node/database-handler').default>>>>
     }
     '/__nuxt_content/info/sql_dump.txt': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/presets/node/database-handler').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@3.12.0_better-sqlite3@12.8.0_magicast@0.5.2/node_modules/@nuxt/content/dist/runtime/presets/node/database-handler').default>>>>
     }
     '/__nuxt_content/products/query': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/api/query.post').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@3.12.0_better-sqlite3@12.8.0_magicast@0.5.2/node_modules/@nuxt/content/dist/runtime/api/query.post').default>>>>
     }
     '/__nuxt_content/info/query': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/api/query.post').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@3.12.0_better-sqlite3@12.8.0_magicast@0.5.2/node_modules/@nuxt/content/dist/runtime/api/query.post').default>>>>
     }
   }
 }

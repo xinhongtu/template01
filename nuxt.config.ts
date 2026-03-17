@@ -11,7 +11,8 @@ export default defineNuxtConfig({
   },
   modules: [
    '@nuxt/content',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxthq/studio'
   ],
   future: {
     compatibilityVersion: 4,

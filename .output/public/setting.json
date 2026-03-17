@@ -1,0 +1,17 @@
+{
+  "logo": {
+    "logoUrl": "/img/logo2.svg",
+    "logoName": "Your Logo"
+  },
+  "hero": {
+    "welcomeText": "欢迎来到老爹模板",
+    "mainHeading": "Your Global Business Journey Starts Here!",
+    "subtitle": "We exist to help your financial journey from start to finish. Just tell us your goals and we make it happen.",
+    "ctaButton": "Discover our products",
+    "secondaryButton": "Contact us",
+    "yearsInBusiness": "15+",
+    "transactionsProcessed": "$1.5M",
+    "customerSatisfaction": "98.2%",
+    "phoneNumber": "+86 (136) 5661-7631"
+  }
+}
