@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   modules: [
    '@nuxt/content',
     '@nuxtjs/sitemap',
-    '@nuxthq/studio'
+    '@nuxthq/studio',
   ],
   future: {
     compatibilityVersion: 4,
@@ -39,5 +39,19 @@ export default defineNuxtConfig({
     // 只有在服务端可以访问
     emailUser: process.env.NUXT_EMAIL_USER,
     emailPass: process.env.NUXT_EMAIL_PASS,
+  },
+  vue: {
+    compilerOptions: {
+      directiveTransforms: {
+        'scroll-reveal': () => ({
+          props: [],
+          needRuntime: true,
+        }),
+        'scroll-group': () => ({
+          props: [],
+          needRuntime: true,
+        }),
+      },
+    },
   },
 })

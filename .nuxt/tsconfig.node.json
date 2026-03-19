@@ -5,7 +5,7 @@
         "../node_modules/.pnpm/@unhead+vue@2.1.12_vue@3.5.30_typescript@5.9.3_/node_modules/@unhead/vue"
       ],
       "@nuxt/devtools": [
-        "../node_modules/.pnpm/@nuxt+devtools@3.2.4_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser@5.46.1_yaml@2.8.2__vue@3.5.30_typescript@5.9.3_/node_modules/@nuxt/devtools"
+        "../node_modules/.pnpm/@nuxt+devtools@3.2.4_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terser@5.46.1_yaml@2.8.2__vue@3.5.30_typescript@5.9.3_/node_modules/@nuxt/devtools"
       ],
       "vue": [
         "../node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue"
@@ -26,16 +26,16 @@
         "../node_modules/.pnpm/@nuxt+schema@4.4.2/node_modules/@nuxt/schema"
       ],
       "nuxt": [
-        "../node_modules/.pnpm/nuxt@4.4.2_@babel+core@7.29.0_@babel+plugin-syntax-jsx@7.28.6_@babel+core@7.29.0__@parc_4345ff1cec2b6b7734613e7fa5275557/node_modules/nuxt"
+        "../node_modules/.pnpm/nuxt@4.4.2_@babel+core@7.29.0_@babel+plugin-syntax-jsx@7.28.6_@babel+core@7.29.0__@parc_4bfa5122bc3ca6272e388f0ef1e07962/node_modules/nuxt"
       ],
       "vite/client": [
-        "../node_modules/.pnpm/vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser@5.46.1_yaml@2.8.2/node_modules/vite/client"
+        "../node_modules/.pnpm/vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terser@5.46.1_yaml@2.8.2/node_modules/vite/client"
       ],
       "@nuxtjs/mdc": [
         "../node_modules/.pnpm/@nuxtjs+mdc@0.20.2_magicast@0.5.2/node_modules/@nuxtjs/mdc"
       ],
       "nuxt-site-config": [
-        "../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser_fce97e60baf73fab57ba9205268ef960/node_modules/nuxt-site-config"
+        "../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terse_f94cabaa9926d68eeace446188cda826/node_modules/nuxt-site-config"
       ],
       "nitropack/types": [
         "../node_modules/.pnpm/nitropack@2.13.1_better-sqlite3@12.8.0/node_modules/nitropack/types"
@@ -96,12 +96,12 @@
   ],
   "exclude": [
     "../node_modules",
-    "../node_modules/.pnpm/nuxt@4.4.2_@babel+core@7.29.0_@babel+plugin-syntax-jsx@7.28.6_@babel+core@7.29.0__@parc_4345ff1cec2b6b7734613e7fa5275557/node_modules/nuxt/node_modules",
+    "../node_modules/.pnpm/nuxt@4.4.2_@babel+core@7.29.0_@babel+plugin-syntax-jsx@7.28.6_@babel+core@7.29.0__@parc_4bfa5122bc3ca6272e388f0ef1e07962/node_modules/nuxt/node_modules",
     "../node_modules/.pnpm/@nuxt+content@3.12.0_better-sqlite3@12.8.0_magicast@0.5.2/node_modules/@nuxt/content/node_modules",
-    "../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser_fce97e60baf73fab57ba9205268ef960/node_modules/nuxt-site-config/node_modules",
-    "../node_modules/.pnpm/@nuxtjs+sitemap@7.6.0_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser@5_ff5f45e1ec9b8c8541cc82a74ac25947/node_modules/@nuxtjs/sitemap/node_modules",
+    "../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terse_f94cabaa9926d68eeace446188cda826/node_modules/nuxt-site-config/node_modules",
+    "../node_modules/.pnpm/@nuxtjs+sitemap@7.6.0_magicast@0.5.2_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terser@_22eb16b40b4ae92e2fad967f171bcbf3/node_modules/@nuxtjs/sitemap/node_modules",
     "../node_modules/.pnpm/@nuxthq+studio@2.2.1_magicast@0.5.2/node_modules/@nuxthq/studio/node_modules",
-    "../node_modules/.pnpm/@nuxt+devtools@3.2.4_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser@5.46.1_yaml@2.8.2__vue@3.5.30_typescript@5.9.3_/node_modules/@nuxt/devtools/node_modules",
+    "../node_modules/.pnpm/@nuxt+devtools@3.2.4_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terser@5.46.1_yaml@2.8.2__vue@3.5.30_typescript@5.9.3_/node_modules/@nuxt/devtools/node_modules",
     "../node_modules/.pnpm/@nuxt+telemetry@2.7.0_@nuxt+kit@4.4.2_magicast@0.5.2_/node_modules/@nuxt/telemetry/node_modules",
     "../node_modules/.pnpm/@nuxtjs+mdc@0.20.2_magicast@0.5.2/node_modules/@nuxtjs/mdc/node_modules",
     "../dist",
@@ -117,19 +117,19 @@
     "../layers/*/modules/*/runtime/server/**/*",
     "../node_modules/.pnpm/@nuxt+content@3.12.0_better-sqlite3@12.8.0_magicast@0.5.2/node_modules/runtime",
     "../node_modules/.pnpm/@nuxt+content@3.12.0_better-sqlite3@12.8.0_magicast@0.5.2/node_modules/dist/runtime",
-    "../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser_fce97e60baf73fab57ba9205268ef960/node_modules/nuxt-site-config/dist/runtime",
-    "../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser_fce97e60baf73fab57ba9205268ef960/node_modules/nuxt-site-config/dist/dist/runtime",
-    "../node_modules/.pnpm/@nuxtjs+sitemap@7.6.0_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser@5_ff5f45e1ec9b8c8541cc82a74ac25947/node_modules/runtime",
-    "../node_modules/.pnpm/@nuxtjs+sitemap@7.6.0_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser@5_ff5f45e1ec9b8c8541cc82a74ac25947/node_modules/dist/runtime",
+    "../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terse_f94cabaa9926d68eeace446188cda826/node_modules/nuxt-site-config/dist/runtime",
+    "../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terse_f94cabaa9926d68eeace446188cda826/node_modules/nuxt-site-config/dist/dist/runtime",
+    "../node_modules/.pnpm/@nuxtjs+sitemap@7.6.0_magicast@0.5.2_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terser@_22eb16b40b4ae92e2fad967f171bcbf3/node_modules/runtime",
+    "../node_modules/.pnpm/@nuxtjs+sitemap@7.6.0_magicast@0.5.2_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terser@_22eb16b40b4ae92e2fad967f171bcbf3/node_modules/dist/runtime",
     "../node_modules/.pnpm/@nuxthq+studio@2.2.1_magicast@0.5.2/node_modules/runtime",
     "../node_modules/.pnpm/@nuxthq+studio@2.2.1_magicast@0.5.2/node_modules/dist/runtime",
-    "../node_modules/.pnpm/@nuxt+devtools@3.2.4_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser@5.46.1_yaml@2.8.2__vue@3.5.30_typescript@5.9.3_/node_modules/runtime",
-    "../node_modules/.pnpm/@nuxt+devtools@3.2.4_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser@5.46.1_yaml@2.8.2__vue@3.5.30_typescript@5.9.3_/node_modules/dist/runtime",
+    "../node_modules/.pnpm/@nuxt+devtools@3.2.4_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terser@5.46.1_yaml@2.8.2__vue@3.5.30_typescript@5.9.3_/node_modules/runtime",
+    "../node_modules/.pnpm/@nuxt+devtools@3.2.4_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terser@5.46.1_yaml@2.8.2__vue@3.5.30_typescript@5.9.3_/node_modules/dist/runtime",
     "../node_modules/.pnpm/@nuxt+telemetry@2.7.0_@nuxt+kit@4.4.2_magicast@0.5.2_/node_modules/runtime",
     "../node_modules/.pnpm/@nuxt+telemetry@2.7.0_@nuxt+kit@4.4.2_magicast@0.5.2_/node_modules/dist/runtime",
     "../node_modules/.pnpm/@nuxtjs+mdc@0.20.2_magicast@0.5.2/node_modules/runtime",
     "../node_modules/.pnpm/@nuxtjs+mdc@0.20.2_magicast@0.5.2/node_modules/dist/runtime",
-    "../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser_fce97e60baf73fab57ba9205268ef960/node_modules/runtime",
-    "../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser_fce97e60baf73fab57ba9205268ef960/node_modules/dist/runtime"
+    "../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terse_f94cabaa9926d68eeace446188cda826/node_modules/runtime",
+    "../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terse_f94cabaa9926d68eeace446188cda826/node_modules/dist/runtime"
   ]
 }

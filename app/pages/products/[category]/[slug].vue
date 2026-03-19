@@ -132,14 +132,19 @@ const { data: product, pending } = await useAsyncData(`product-${route.path}`, (
   return queryCollection('products').path(route.path).first()
 })
 
-console.log('查询结果:', product.value)
-
-
-console.log('categoryName', categoryName)
-console.log('product', product.value)
-// 调试输出：如果页面还是空白，请在浏览器控制台看这两个打印
-console.log('当前路由路径:', route.path)
-console.log('查询到的数据:', product.value)
+// seo meta
+watchEffect(() => {
+  if (product.value) {
+    useSeoMeta({
+      title: product.value.seo?.title || product.value.title,
+      description: product.value.seo?.description || product.value.description,
+      ogTitle: product.value.seo?.title || product.value.title,
+      ogDescription: product.value.seo?.description || product.value.description,
+      ogImage: product.value.seo?.image || '/default-og.jpg',
+      twitterCard: 'summary_large_image',
+    })
+  }
+})
 </script>
 
 <style>

@@ -15,7 +15,7 @@
     "subtitle": "We exist to help your financial journey from start to finish. Just tell us your goals and we make it happen.",
     "ctaButton": "Discover our products",
     "secondaryButton": "Contact us",
-    "yearsInBusiness": "15+",
+    "yearsInBusiness": "35+",
     "transactionsProcessed": "$1.5M",
     "customerSatisfaction": "98.2%",
     "phoneNumber": "+86 (136) 5661-7631"
@@ -140,5 +140,25 @@
     "phone": "+86 136 5661 7631",
     "address": "123 Business Avenue, Tech Industrial Zone, Shenzhen, China",
      "web3FormsKey": "6fba6186-2858-4c1f-8838-34586a330ee3"
+  },
+  "seo":{
+    "index":{
+        "title": "老爹模板 - 首页",
+        "description": "老爹模板为外贸企业提供免费模板,帮助他们快速启动业务,提高效率。",
+        "ogImage": "/default-og.jpg",
+        "twitterCard": "summary_large_image"
+    },
+    "about":{
+        "title": "老爹模板 - 关于我们",
+        "description": "老爹模板为外贸企业提供免费模板,帮助他们快速启动业务,提高效率。",
+        "ogImage": "/default-og.jpg",
+        "twitterCard": "summary_large_image"
+    },
+    "contact":{
+        "title": "老爹模板 - 联系我们",
+        "description": "老爹模板为外贸企业提供免费模板,帮助他们快速启动业务,提高效率。",
+        "ogImage": "/default-og.jpg",
+        "twitterCard": "summary_large_image"
+    }
   }
 }

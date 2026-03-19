@@ -1,47 +1,47 @@
 import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { tmpdir } from 'node:os';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getQuery as getQuery$1, readBody, getRequestProtocol, getRequestHost, setHeader, getHeader, getRouterParam, getResponseStatus, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, setCookie, getCookie, deleteCookie, getResponseStatusText } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/h3@1.15.6/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getQuery as getQuery$1, readBody, getRequestProtocol, getRequestHost, setHeader, getHeader, getRouterParam, getResponseStatus, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, setCookie, getCookie, deleteCookie, getResponseStatusText } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/h3@1.15.6/node_modules/h3/dist/index.mjs';
 import { Server } from 'node:http';
 import { resolve as resolve$1, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
-import { escapeHtml } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/@vue+shared@3.5.30/node_modules/@vue/shared/dist/shared.cjs.js';
-import svgCaptcha from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/svg-captcha@1.4.0/node_modules/svg-captcha/index.js';
-import nodemailer from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/nodemailer@8.0.2/node_modules/nodemailer/lib/nodemailer.js';
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/vue-bundle-renderer@2.2.0/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, hasProtocol, withHttps, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, joinRelativeURL, parsePath, stringifyQuery, parseQuery, encodePath, stringifyParsedURL, withBase } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/ufo@1.6.3/node_modules/ufo/dist/index.mjs';
-import destr, { destr as destr$1 } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/destr@2.0.5/node_modules/destr/dist/index.mjs';
-import { createHooks } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/hookable@5.5.3/node_modules/hookable/dist/index.mjs';
-import { createFetch, Headers as Headers$1 } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/ofetch@1.5.1/node_modules/ofetch/dist/node.mjs';
-import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/node-mock-http@1.0.4/node_modules/node-mock-http/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/unstorage@1.17.4_db0@0.3.4_better-sqlite3@12.8.0__ioredis@5.10.0/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/unstorage@1.17.4_db0@0.3.4_better-sqlite3@12.8.0__ioredis@5.10.0/node_modules/unstorage/drivers/fs.mjs';
-import { digest } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/ohash@2.0.11/node_modules/ohash/dist/index.mjs';
-import { klona } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/klona@2.0.6/node_modules/klona/dist/index.mjs';
-import defu, { defuFn, defu as defu$1, createDefu } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/defu@6.1.4/node_modules/defu/dist/defu.mjs';
-import { snakeCase } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/scule@1.3.0/node_modules/scule/dist/index.mjs';
-import { getContext } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/unctx@2.5.0/node_modules/unctx/dist/index.mjs';
-import { toRouteMatcher, createRouter } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/radix3@1.1.2/node_modules/radix3/dist/index.mjs';
+import { escapeHtml } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/@vue+shared@3.5.30/node_modules/@vue/shared/dist/shared.cjs.js';
+import svgCaptcha from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/svg-captcha@1.4.0/node_modules/svg-captcha/index.js';
+import nodemailer from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/nodemailer@8.0.2/node_modules/nodemailer/lib/nodemailer.js';
+import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/vue-bundle-renderer@2.2.0/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, hasProtocol, withHttps, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, joinRelativeURL, parsePath, stringifyQuery, parseQuery, encodePath, stringifyParsedURL, withBase } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/ufo@1.6.3/node_modules/ufo/dist/index.mjs';
+import destr, { destr as destr$1 } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/destr@2.0.5/node_modules/destr/dist/index.mjs';
+import { createHooks } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/hookable@5.5.3/node_modules/hookable/dist/index.mjs';
+import { createFetch, Headers as Headers$1 } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/ofetch@1.5.1/node_modules/ofetch/dist/node.mjs';
+import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/node-mock-http@1.0.4/node_modules/node-mock-http/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/unstorage@1.17.4_db0@0.3.4_better-sqlite3@12.8.0__ioredis@5.10.0/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/unstorage@1.17.4_db0@0.3.4_better-sqlite3@12.8.0__ioredis@5.10.0/node_modules/unstorage/drivers/fs.mjs';
+import { digest } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/ohash@2.0.11/node_modules/ohash/dist/index.mjs';
+import { klona } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/klona@2.0.6/node_modules/klona/dist/index.mjs';
+import defu, { defuFn, defu as defu$1, createDefu } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/defu@6.1.4/node_modules/defu/dist/defu.mjs';
+import { snakeCase } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/scule@1.3.0/node_modules/scule/dist/index.mjs';
+import { getContext } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/unctx@2.5.0/node_modules/unctx/dist/index.mjs';
+import { toRouteMatcher, createRouter } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/radix3@1.1.2/node_modules/radix3/dist/index.mjs';
 import { readFile } from 'node:fs/promises';
-import consola, { createConsola, consola as consola$1 } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/consola@3.4.2/node_modules/consola/dist/index.mjs';
-import { ErrorParser } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/youch-core@0.3.3/node_modules/youch-core/build/index.js';
-import { Youch } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/youch@4.1.0/node_modules/youch/build/index.js';
-import { SourceMapConsumer } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/source-map@0.7.6/node_modules/source-map/source-map.js';
-import devalue from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/@nuxt+devalue@2.0.2/node_modules/@nuxt/devalue/dist/devalue.mjs';
-import { toValue, isVNode, isRef } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue/index.mjs';
+import consola, { createConsola, consola as consola$1 } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/consola@3.4.2/node_modules/consola/dist/index.mjs';
+import { ErrorParser } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/youch-core@0.3.3/node_modules/youch-core/build/index.js';
+import { Youch } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/youch@4.1.0/node_modules/youch/build/index.js';
+import { SourceMapConsumer } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/source-map@0.7.6/node_modules/source-map/source-map.js';
+import devalue from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/@nuxt+devalue@2.0.2/node_modules/@nuxt/devalue/dist/devalue.mjs';
+import { toValue, isVNode, isRef } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue/index.mjs';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { stringify, uneval } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/devalue@5.6.4/node_modules/devalue/index.js';
-import { captureRawStackTrace, parseRawStackTrace } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/errx@0.1.0/node_modules/errx/dist/index.js';
-import _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/@nuxt+vite-builder@4.4.2_@babel+plugin-syntax-jsx@7.28.6_@babel+core@7.29.0__lightningc_90c189a5147260a9846af229384e8a86/node_modules/@nuxt/vite-builder/dist/fix-stacktrace.mjs';
+import { stringify, uneval } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/devalue@5.6.4/node_modules/devalue/index.js';
+import { captureRawStackTrace, parseRawStackTrace } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/errx@0.1.0/node_modules/errx/dist/index.js';
+import _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/@nuxt+vite-builder@4.4.2_@babel+plugin-syntax-jsx@7.28.6_@babel+core@7.29.0__lightningc_ac92970a05d9b0e4c1159a3fd931f2a1/node_modules/@nuxt/vite-builder/dist/fix-stacktrace.mjs';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname as dirname$1, resolve as resolve$2, isAbsolute } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/pathe@2.0.3/node_modules/pathe/dist/index.mjs';
-import { createHead as createHead$1, propsToString, renderSSRHead } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/unhead@2.1.12/node_modules/unhead/dist/server.mjs';
-import { renderToString } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue/server-renderer/index.mjs';
-import { walkResolver } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/unhead@2.1.12/node_modules/unhead/dist/utils.mjs';
-import { XMLParser } from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/fast-xml-parser@5.5.6/node_modules/fast-xml-parser/src/fxp.js';
-import localAdapter from 'file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/db0@0.3.4_better-sqlite3@12.8.0/node_modules/db0/dist/connectors/better-sqlite3.mjs';
+import { dirname as dirname$1, resolve as resolve$2, isAbsolute } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/pathe@2.0.3/node_modules/pathe/dist/index.mjs';
+import { createHead as createHead$1, propsToString, renderSSRHead } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/unhead@2.1.12/node_modules/unhead/dist/server.mjs';
+import { renderToString } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/vue@3.5.30_typescript@5.9.3/node_modules/vue/server-renderer/index.mjs';
+import { walkResolver } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/unhead@2.1.12/node_modules/unhead/dist/utils.mjs';
+import { XMLParser } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/fast-xml-parser@5.5.6/node_modules/fast-xml-parser/src/fxp.js';
+import localAdapter from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/db0@0.3.4_better-sqlite3@12.8.0/node_modules/db0/dist/connectors/better-sqlite3.mjs';
 
-const serverAssets = [{"baseName":"server","dir":"/Users/zhuxiaoming/Documents/trae_projects/template01/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"/Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/server/assets"}];
 
 const assets$1 = createStorage();
 
@@ -53,11 +53,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets$1);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/zhuxiaoming/Documents/trae_projects/template01","watchOptions":{"ignored":[null]}}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/zhuxiaoming/Documents/trae_projects/template01/server","watchOptions":{"ignored":[null]}}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/zhuxiaoming/Documents/trae_projects/template01/.nuxt"}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/zhuxiaoming/Documents/trae_projects/template01/.nuxt/cache"}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/Users/zhuxiaoming/Documents/trae_projects/template01/.data/kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/zhuenxi/Documents/trae_projects/nuxt-2026-001","watchOptions":{"ignored":[null]}}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/server","watchOptions":{"ignored":[null]}}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/.nuxt"}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/.nuxt/cache"}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/.data/kv"}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -776,7 +776,7 @@ const _inlineRuntimeConfig = {
     },
     "localDatabase": {
       "type": "sqlite",
-      "filename": "/Users/zhuxiaoming/Documents/trae_projects/template01/.data/content/contents.sqlite"
+      "filename": "/Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/.data/content/contents.sqlite"
     },
     "integrityCheck": true
   },
@@ -785,7 +785,7 @@ const _inlineRuntimeConfig = {
       {
         "_context": "system",
         "_priority": -15,
-        "name": "template01",
+        "name": "nuxt-2026-001",
         "env": "development"
       },
       {
@@ -2180,7 +2180,7 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _7jLKTWHXphnOSqyxmqnwABBOg0NDWuNzWmwbymknl0 = (function(nitro) {
+const _ThkAobRmXl1RYNYDoo9lpeo94mjO44xYMAxjr7CXoCw = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
@@ -2280,7 +2280,7 @@ function getSiteConfig(e, _options) {
   return e.context.siteConfig.get(options);
 }
 
-const _gURbXDgIfWMNTNUzfdDyloHwz9vxMxOn4Uj3EuI = defineNitroPlugin(async (nitroApp) => {
+const _ZtU_UCvxsjpZAX2BTugZQZZxlL6cghRrMW2tw66JyO0 = defineNitroPlugin(async (nitroApp) => {
   nitroApp.hooks.hook("render:html", async (ctx, { event }) => {
     const routeOptions = getRouteRules(event);
     const isIsland = process.env.NUXT_COMPONENT_ISLANDS && event.path.startsWith("/__nuxt_island");
@@ -2295,7 +2295,7 @@ const _gURbXDgIfWMNTNUzfdDyloHwz9vxMxOn4Uj3EuI = defineNitroPlugin(async (nitroA
   });
 });
 
-const rootDir = "/Users/zhuxiaoming/Documents/trae_projects/template01";
+const rootDir = "/Users/zhuenxi/Documents/trae_projects/nuxt-2026-001";
 
 const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"}],"style":[],"script":[],"noscript":[]};
 
@@ -2324,7 +2324,7 @@ const asyncContext = getContext("nuxt-dev", {
 	asyncContext: true,
 	AsyncLocalStorage
 });
-const _TicGaqSb1PJgWdvT2qD6lwLrgsYnplzV1uz5XS2mKM = (nitroApp) => {
+const _tAQyw66y8AQXZuzvAMCeHyaTuaywyIHtkB8nCWtyAVI = (nitroApp) => {
 	const handler = nitroApp.h3App.handler;
 	nitroApp.h3App.handler = (event) => {
 		return asyncContext.callAsync({
@@ -2398,9 +2398,9 @@ function onConsoleLog(callback) {
 }
 
 const plugins = [
-  _7jLKTWHXphnOSqyxmqnwABBOg0NDWuNzWmwbymknl0,
-_gURbXDgIfWMNTNUzfdDyloHwz9vxMxOn4Uj3EuI,
-_TicGaqSb1PJgWdvT2qD6lwLrgsYnplzV1uz5XS2mKM,
+  _ThkAobRmXl1RYNYDoo9lpeo94mjO44xYMAxjr7CXoCw,
+_ZtU_UCvxsjpZAX2BTugZQZZxlL6cghRrMW2tw66JyO0,
+_tAQyw66y8AQXZuzvAMCeHyaTuaywyIHtkB8nCWtyAVI,
 _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw
 ];
 
@@ -2429,7 +2429,7 @@ function getAsset (id) {
 
 const METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
 const EncodingMap = { gzip: ".gz", br: ".br" };
-const _22SVD3 = eventHandler((event) => {
+const _uOd3Gv = eventHandler((event) => {
   if (event.method && !METHODS.has(event.method)) {
     return;
   }
@@ -2570,9 +2570,9 @@ function publicAssetsURL(...path) {
 const APP_ROOT_OPEN_TAG = `<${appRootTag}${propsToString(appRootAttrs)}>`;
 const APP_ROOT_CLOSE_TAG = `</${appRootTag}>`;
 // @ts-expect-error file will be produced after app build
-const getServerEntry = () => import('file:///Users/zhuxiaoming/Documents/trae_projects/template01/.nuxt//dist/server/server.mjs').then((r) => r.default || r);
+const getServerEntry = () => import('file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/.nuxt//dist/server/server.mjs').then((r) => r.default || r);
 // @ts-expect-error file will be produced after app build
-const getClientManifest = () => import('file:///Users/zhuxiaoming/Documents/trae_projects/template01/.nuxt//dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getClientManifest = () => import('file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/.nuxt//dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 // -- SSR Renderer --
 const getSSRRenderer = lazyCachedFunction(async () => {
 	// Load server bundle
@@ -2958,7 +2958,7 @@ function getNitroOrigin(e) {
   });
 }
 
-const _8ikuZu = eventHandler(async (e) => {
+const _3LyBoN = eventHandler(async (e) => {
   if (e.context._initedSiteConfig)
     return;
   const runtimeConfig = useRuntimeConfig(e);
@@ -3009,7 +3009,7 @@ const _8ikuZu = eventHandler(async (e) => {
   e.context._initedSiteConfig = true;
 });
 
-const _OZjXIM = eventHandler(async (e) => {
+const _md7NL9 = eventHandler(async (e) => {
   const siteConfig = getSiteConfig(e);
   const nitroOrigin = getNitroOrigin(e);
   const runtimeConfig = useRuntimeConfig(e);
@@ -3249,7 +3249,7 @@ const filters = new Map();
 
 const onUrlFns = new Map();
 
-const _bexDN9 = defineEventHandler(async (e) => {
+const _Ox8dbt = defineEventHandler(async (e) => {
   const collections = [];
   for (const collection in contentManifest) {
     if (contentManifest[collection].fields.sitemap)
@@ -3736,7 +3736,7 @@ async function parseSitemapXml(xml) {
   if (!xml) {
     throw new Error("Empty XML input provided");
   }
-  const { XMLParser } = await import('file:///Users/zhuxiaoming/Documents/trae_projects/template01/node_modules/.pnpm/fast-xml-parser@5.5.6/node_modules/fast-xml-parser/src/fxp.js');
+  const { XMLParser } = await import('file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/fast-xml-parser@5.5.6/node_modules/fast-xml-parser/src/fxp.js');
   const parser = new XMLParser({
     isArray: (tagName) => ["url", "image", "video", "link", "tag", "price"].includes(tagName),
     removeNSPrefix: true,
@@ -4263,7 +4263,7 @@ function attachUrlWarnings(sources) {
   }
   return sources;
 }
-const _jLj0ld = defineEventHandler(async (e) => {
+const _0iZBaj = defineEventHandler(async (e) => {
   const _runtimeConfig = useSitemapRuntimeConfig();
   const siteConfig = getSiteConfig(e);
   const { sitemaps: _sitemaps } = _runtimeConfig;
@@ -4288,7 +4288,7 @@ const _jLj0ld = defineEventHandler(async (e) => {
   };
 });
 
-const _4asQwh = defineEventHandler(async (e) => {
+const _sBAhJ7 = defineEventHandler(async (e) => {
   const fixPath = createSitePathResolver(e, { absolute: false, withBase: true });
   const { sitemapName: fallbackSitemapName, cacheMaxAgeSeconds, version, xslColumns, xslTips } = useSitemapRuntimeConfig();
   setHeader(e, "Content-Type", "application/xslt+xml");
@@ -5303,9 +5303,9 @@ async function sitemapXmlEventHandler(e) {
   return createSitemap(e, Object.values(sitemaps)[0], runtimeConfig);
 }
 
-const _d5aQ_2 = defineEventHandler(sitemapXmlEventHandler);
+const _0SWuMX = defineEventHandler(sitemapXmlEventHandler);
 
-const _nq0zqy = eventHandler(async (event) => {
+const _gbazsx = eventHandler(async (event) => {
   const collection = getRouterParam(event, "collection") || event.path?.split("/")?.[2] || "";
   setHeader(event, "Content-Type", "text/plain");
   const data = await useStorage().getItem(`build:content:database.compressed.mjs`) || "";
@@ -5316,7 +5316,7 @@ const _nq0zqy = eventHandler(async (event) => {
       return content.substring(lineStart.length, content.length - 1);
     }
   }
-  return await import('file:///Users/zhuxiaoming/Documents/trae_projects/template01/.nuxt/content/database.compressed.mjs').then((m) => m[collection]);
+  return await import('file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/.nuxt/content/database.compressed.mjs').then((m) => m[collection]);
 });
 
 async function decompressSQLDump(base64Str, compressionType = "gzip") {
@@ -5686,7 +5686,7 @@ async function runTask(name, {
   }
 }
 
-const _SbQp_R = eventHandler(async (event) => {
+const _J3rP3v = eventHandler(async (event) => {
   const { sql } = await readBody(event);
   const collection = getRouterParam(event, "collection") || event.path?.split("/")?.[2] || "";
   assertSafeQuery(sql, collection);
@@ -5697,27 +5697,27 @@ const _SbQp_R = eventHandler(async (event) => {
   return loadDatabaseAdapter(conf).all(sql);
 });
 
-const _lazy_6TRzl4 = () => Promise.resolve().then(function () { return captcha_get$1; });
-const _lazy_EqaJfm = () => Promise.resolve().then(function () { return submit_post$1; });
-const _lazy_KswbWz = () => Promise.resolve().then(function () { return renderer; });
+const _lazy_AQjBHJ = () => Promise.resolve().then(function () { return captcha_get$1; });
+const _lazy_9dtt__ = () => Promise.resolve().then(function () { return submit_post$1; });
+const _lazy_wkNhc8 = () => Promise.resolve().then(function () { return renderer; });
 
 const handlers = [
-  { route: '', handler: _22SVD3, lazy: false, middleware: true, method: undefined },
-  { route: '/api/captcha', handler: _lazy_6TRzl4, lazy: true, middleware: false, method: "get" },
-  { route: '/api/submit', handler: _lazy_EqaJfm, lazy: true, middleware: false, method: "post" },
-  { route: '/__nuxt_error', handler: _lazy_KswbWz, lazy: true, middleware: false, method: undefined },
+  { route: '', handler: _uOd3Gv, lazy: false, middleware: true, method: undefined },
+  { route: '/api/captcha', handler: _lazy_AQjBHJ, lazy: true, middleware: false, method: "get" },
+  { route: '/api/submit', handler: _lazy_9dtt__, lazy: true, middleware: false, method: "post" },
+  { route: '/__nuxt_error', handler: _lazy_wkNhc8, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: handler$1, lazy: false, middleware: false, method: undefined },
-  { route: '', handler: _8ikuZu, lazy: false, middleware: true, method: undefined },
-  { route: '/__site-config__/debug.json', handler: _OZjXIM, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/nuxt-content-urls.json', handler: _bexDN9, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/debug.json', handler: _jLj0ld, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/style.xsl', handler: _4asQwh, lazy: false, middleware: false, method: undefined },
-  { route: '/sitemap.xml', handler: _d5aQ_2, lazy: false, middleware: false, method: undefined },
-  { route: '/__nuxt_content/products/sql_dump.txt', handler: _nq0zqy, lazy: false, middleware: false, method: undefined },
-  { route: '/__nuxt_content/info/sql_dump.txt', handler: _nq0zqy, lazy: false, middleware: false, method: undefined },
-  { route: '/__nuxt_content/products/query', handler: _SbQp_R, lazy: false, middleware: false, method: undefined },
-  { route: '/__nuxt_content/info/query', handler: _SbQp_R, lazy: false, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_KswbWz, lazy: true, middleware: false, method: undefined }
+  { route: '', handler: _3LyBoN, lazy: false, middleware: true, method: undefined },
+  { route: '/__site-config__/debug.json', handler: _md7NL9, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/nuxt-content-urls.json', handler: _Ox8dbt, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/debug.json', handler: _0iZBaj, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/style.xsl', handler: _sBAhJ7, lazy: false, middleware: false, method: undefined },
+  { route: '/sitemap.xml', handler: _0SWuMX, lazy: false, middleware: false, method: undefined },
+  { route: '/__nuxt_content/products/sql_dump.txt', handler: _gbazsx, lazy: false, middleware: false, method: undefined },
+  { route: '/__nuxt_content/info/sql_dump.txt', handler: _gbazsx, lazy: false, middleware: false, method: undefined },
+  { route: '/__nuxt_content/products/query', handler: _J3rP3v, lazy: false, middleware: false, method: undefined },
+  { route: '/__nuxt_content/info/query', handler: _J3rP3v, lazy: false, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_wkNhc8, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {

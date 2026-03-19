@@ -156,4 +156,15 @@ const displayAbout = computed(() => {
   }
   return props.aboutData
 })
+
+
+// seo meta
+useSeoMeta({
+  title: () => siteConfig.value?.seo?.about.title || 'Default Title',
+  description: () => siteConfig.value?.seo?.about.description || 'Default description',
+  ogTitle: () => siteConfig.value?.seo?.about.title || 'Default Title',
+  ogDescription: () => siteConfig.value?.seo?.about.description || 'Default description',
+  ogImage: () => siteConfig.value?.seo?.about.ogImage || '/default-og.jpg',
+  twitterCard: () => siteConfig.value?.seo?.about.twitterCard || 'summary_large_image', 
+})
 </script>

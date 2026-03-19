@@ -2,7 +2,7 @@
 /// <reference path="nitro-layouts.d.ts" />
 /// <reference path="app.config.d.ts" />
 /// <reference path="runtime-config.d.ts" />
-/// <reference path="../../node_modules/.pnpm/@nuxt+nitro-server@4.4.2_@babel+core@7.29.0_better-sqlite3@12.8.0_db0@0.3.4_better-sqli_c916226fcf78f8c4221bbe74a16f7d05/node_modules/@nuxt/nitro-server/dist/index.d.mts" />
+/// <reference path="../../node_modules/.pnpm/@nuxt+nitro-server@4.4.2_@babel+core@7.29.0_better-sqlite3@12.8.0_db0@0.3.4_better-sqli_83cfdcca6a1a6f596992f2751ac20aea/node_modules/@nuxt/nitro-server/dist/index.d.mts" />
 /// <reference path="../module/nuxt-site-config.d.ts" />
 /// <reference path="nitro-middleware.d.ts" />
 

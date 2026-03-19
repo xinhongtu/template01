@@ -2,19 +2,19 @@
 
 declare module 'nitropack' {
   interface NitroRouteRules {
-    site?: import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser_fce97e60baf73fab57ba9205268ef960/node_modules/nuxt-site-config/dist/runtime/types').SiteConfigInput
+    site?: import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terse_f94cabaa9926d68eeace446188cda826/node_modules/nuxt-site-config/dist/runtime/types').SiteConfigInput
   }
   interface NitroRouteConfig {
-    site?: import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser_fce97e60baf73fab57ba9205268ef960/node_modules/nuxt-site-config/dist/runtime/types').SiteConfig
+    site?: import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terse_f94cabaa9926d68eeace446188cda826/node_modules/nuxt-site-config/dist/runtime/types').SiteConfig
   }
   interface NitroRuntimeHooks {
-    'site-config:init': (ctx: import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser_fce97e60baf73fab57ba9205268ef960/node_modules/nuxt-site-config/dist/runtime/types').HookSiteConfigInitContext) => void | Promise<void>
+    'site-config:init': (ctx: import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terse_f94cabaa9926d68eeace446188cda826/node_modules/nuxt-site-config/dist/runtime/types').HookSiteConfigInitContext) => void | Promise<void>
   }
 }
 
 declare module 'h3' {
   interface H3EventContext {
-    siteConfig: import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser_fce97e60baf73fab57ba9205268ef960/node_modules/nuxt-site-config/dist/runtime/types').SiteConfigStack
+    siteConfig: import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terse_f94cabaa9926d68eeace446188cda826/node_modules/nuxt-site-config/dist/runtime/types').SiteConfigStack
     siteConfigNitroOrigin: string
   }
 }
@@ -22,24 +22,24 @@ declare module 'h3' {
 
 declare module '@nuxt/schema' {
   interface Nuxt {
-    _siteConfig?: import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser_fce97e60baf73fab57ba9205268ef960/node_modules/nuxt-site-config/dist/runtime/types').SiteConfigStack
+    _siteConfig?: import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terse_f94cabaa9926d68eeace446188cda826/node_modules/nuxt-site-config/dist/runtime/types').SiteConfigStack
   }
 }
 declare module 'nuxt/app' {
   interface NuxtApp {
-     $nuxtSiteConfig: import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser_fce97e60baf73fab57ba9205268ef960/node_modules/nuxt-site-config/dist/runtime/types').SiteConfigStack
+     $nuxtSiteConfig: import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terse_f94cabaa9926d68eeace446188cda826/node_modules/nuxt-site-config/dist/runtime/types').SiteConfigStack
   }
 }
 declare module '#app' {
   interface NuxtApp {
-    $nuxtSiteConfig: import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser_fce97e60baf73fab57ba9205268ef960/node_modules/nuxt-site-config/dist/runtime/types').SiteConfigStack
+    $nuxtSiteConfig: import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terse_f94cabaa9926d68eeace446188cda826/node_modules/nuxt-site-config/dist/runtime/types').SiteConfigStack
   }
 }
 
 
 declare global {
   interface Window {
-    __NUXT_SITE_CONFIG__: import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@2.6.1_lightningcss@1.31.1_terser_fce97e60baf73fab57ba9205268ef960/node_modules/nuxt-site-config/dist/runtime/types').SiteConfigResolved
+    __NUXT_SITE_CONFIG__: import('../../node_modules/.pnpm/nuxt-site-config@3.2.21_magicast@0.5.2_vite@7.3.1_jiti@1.21.7_lightningcss@1.31.1_terse_f94cabaa9926d68eeace446188cda826/node_modules/nuxt-site-config/dist/runtime/types').SiteConfigResolved
   }
 }
 

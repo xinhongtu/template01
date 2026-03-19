@@ -22,7 +22,7 @@
       <div v-if="products && products.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
         <!-- 🌟 使用我们封装好的组件 -->
         <ProductCard 
-        data-aos="fade-right"
+       
           v-for="item in products" 
           :key="item._path" 
           :product="item" 
@@ -52,6 +52,17 @@ const { data: products } = await useAsyncData(`category-${categoryName}`, () => 
     .where('path', 'LIKE', `/products/${categoryName}/%`)
     .all()
 })
-console.log('products.value',products.value)
+// --- 动态 SEO 设置 ---
+// 将 categoryName 格式化为标题，例如 "laser-therapy" -> "Laser Therapy"
+const formattedCategory = computed(() => 
+  categoryName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+)
+
+useSeoMeta({
+  title: `${formattedCategory.value} | Product Collections`,
+  description: `Explore our collection of ${formattedCategory.value}. High-quality products for your business needs.`,
+  ogTitle: `${formattedCategory.value} | Product Collections`,
+  ogDescription: `Explore our collection of ${formattedCategory.value}. High-quality products for your business needs.`
+})
 </script>
 

@@ -170,4 +170,16 @@ onMounted(async () => {
         if (response.ok) siteConfig.value = await response.json()
     } catch (e) { console.warn("Setting.json not found") }
 })
+
+
+
+// seo meta
+useSeoMeta({
+  title: () => siteConfig.value?.seo?.contact.title || 'Default Title',
+  description: () => siteConfig.value?.seo?.contact.description || 'Default description',
+  ogTitle: () => siteConfig.value?.seo?.contact.title || 'Default Title',
+  ogDescription: () => siteConfig.value?.seo?.contact.description || 'Default description',
+  ogImage: () => siteConfig.value?.seo?.contact.ogImage || '/default-og.jpg',
+  twitterCard: () => siteConfig.value?.seo?.contact.twitterCard || 'summary_large_image',
+})
 </script>
