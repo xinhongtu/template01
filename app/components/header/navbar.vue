@@ -125,7 +125,7 @@
 
 <script setup lang="ts">
 
-import { ref, onMounted, reactive } from 'vue'
+import { ref, onMounted, reactive, computed, watch, onUnmounted } from 'vue'
 import {
     X,  ChevronDown, ArrowRight, 
 } from 'lucide-vue-next'
