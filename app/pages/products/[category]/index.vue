@@ -19,9 +19,10 @@
       </div>
 
       <!-- 列表网格 -->
-      <div v-if="products && products.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div v-if="products && products.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
         <!-- 🌟 使用我们封装好的组件 -->
         <ProductCard 
+        data-aos="fade-right"
           v-for="item in products" 
           :key="item._path" 
           :product="item" 

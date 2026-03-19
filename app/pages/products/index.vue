@@ -35,7 +35,9 @@
 
 <script setup lang="ts">
 import { PackageOpen } from 'lucide-vue-next'
-
+const { data: navData } = await useProductsNav()
 // 硬编码分类列表，实际项目中可能需要从 API 获取
-const categories = ['category1', 'cayegory2']
+console.log('navData', navData.value)
+const categories = navData.value[0].children.map(item => item.title)
+console.log('categories', categories)
 </script>

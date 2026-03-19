@@ -37,11 +37,11 @@
           <!-- Decorative shape -->
           <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-50 transition-all group-hover:scale-125"></div>
 
-          <div class="relative overflow-hidden rounded-2xl shadow-2xl transition-transform duration-500 group-hover:-translate-y-2 max-w-lg ml-auto">
+          <div class="relative overflow-hidden rounded-2xl shadow-2xl  max-w-lg ml-auto">
             <img 
               :src="displaySecondSection.image" 
               :alt="displaySecondSection.imageAlt"
-              class="w-full h-auto object-cover max-h-[500px] transform transition-transform duration-700 group-hover:scale-110"
+              class="w-full h-auto object-cover max-h-[500px] "
             />
           </div>
         </div>

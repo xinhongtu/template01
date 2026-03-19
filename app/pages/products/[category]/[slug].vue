@@ -16,9 +16,7 @@
           <ChevronRight class="w-4 h-4" />
           <span class="text-white line-clamp-1">{{ product?.title || 'Loading...' }}</span>
         </nav>
-        <h1 class="text-3xl md:text-5xl font-bold text-white tracking-tight">
-          {{ product?.title || 'Loading...' }}
-        </h1>
+       
       </div>
     </div>
 
@@ -33,42 +31,64 @@
         </div>
 
         <!-- 右侧区域 -->
-        <div class="mt-20 lg:mt-0 flex flex-col space-y-8">
+        <div class="mt-20 lg:mt-0 flex flex-col space-y-10"> <!-- 增加整体间距到 10 -->
 
-          <!-- 1. 标题区域 -->
-          <h1 class="text-4xl md:text-5xl font-extrabold text-[#001151] leading-tight">
-            {{ product.title }}
-          </h1>
+  <!-- 1. 标题区域：增加小标签，模仿 Hero 风格 -->
+  <div class="space-y-3">
+    <div class="flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_8px_#3b82f6]"></span>
+      <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-500">Official Product</span>
+    </div>
+    <h1 class="text-2xl md:text-3xl lg:text-4xl font-black text-[#001151] leading-[1.15] tracking-tight">
+      {{ product.title }}
+    </h1>
+  </div>
 
-          <!-- 2. 价格区域 (仅当 price 存在时显示) -->
-          <div v-if="product.meta?.price" class="flex items-center gap-2 text-xl font-bold text-slate-800">
-            <Receipt class="w-6 h-6 text-[#001151]" />
-            <span>{{ product.meta?.price }}</span>
-          </div>
+  <!-- 2. 价格区域：改为精致的卡片式展示 -->
+  <div v-if="product.meta?.price" 
+    class="inline-flex items-center gap-4 p-4 bg-slate-50 border border-slate-100 rounded-2xl w-fit pr-8">
+    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center border border-slate-100">
+      <Receipt class="w-6 h-6 text-[#001151]" />
+    </div>
+    <div class="flex flex-col">
+      <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Target Quote</span>
+      <span class="text-2xl font-black text-slate-900 tracking-tight">{{ product.meta?.price }}</span>
+    </div>
+  </div>
 
-          <!-- 3. 描述区域 -->
-          <p class="text-slate-700 text-lg leading-relaxed">
-            {{ product.description }}
-          </p>
+  <!-- 3. 描述区域：增加侧边引导条 -->
+  <div class="relative pl-8">
+    <div class="absolute left-0 top-2 bottom-2 w-1 bg-blue-500/20 rounded-full">
+      <div class="w-full h-1/3 bg-blue-500 rounded-full"></div>
+    </div>
+    <p class="text-slate-600 text-lg leading-relaxed font-medium">
+      {{ product.description }}
+    </p>
+  </div>
 
-          <!-- 4. 决策转化区 (CTA) -->
-          <div class="space-y-3">
-            <button @click="isInquiryOpen = true"
-              class="w-full bg-[#001151] hover:bg-blue-900 text-white font-bold py-4 rounded-xl transition-all shadow-lg active:scale-[0.98]">
-              Send Inquiry
-            </button>
-          </div>
+  <!-- 4. 决策转化区 (CTA)：加入图标和更强的投影 -->
+  <div class="space-y-4">
+    <button @click="isInquiryOpen = true"
+      class="group relative w-full bg-[#001151] hover:bg-blue-900 text-white font-bold py-5 rounded-2xl transition-all shadow-[0_20px_40px_rgba(0,17,81,0.2)] active:scale-[0.98] flex items-center justify-center gap-3 overflow-hidden">
+      <!-- 按钮扫光效果 -->
+      <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+      
+      <span class="relative z-10 text-lg">Send Inquiry Now</span>
+      <ArrowRight class="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+    </button>
+    <p class="text-center text-xs text-slate-400 font-medium">Verified Supplier | Response within 24h</p>
+  </div>
 
-          <!-- 5. 标签区域 (仅当 tags 存在且不为空时显示) -->
-          <div v-if="product.meta?.tags && product.meta?.tags.length > 0"
-            class="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
-            <span v-for="tag in product.meta?.tags" :key="tag"
-              class="px-3 py-1 bg-slate-100 text-slate-600 text-sm font-medium rounded-full">
-              {{ tag }}
-            </span>
-          </div>
+  <!-- 5. 标签区域：更精致的药丸标签 -->
+  <div v-if="product.meta?.tags && product.meta?.tags.length > 0"
+    class="flex flex-wrap gap-2 pt-8 border-t border-slate-100">
+    <span v-for="tag in product.meta?.tags" :key="tag"
+      class="px-4 py-1.5 bg-white border border-slate-200 text-slate-500 text-xs font-bold rounded-full hover:border-blue-300 hover:text-blue-500 transition-colors cursor-default capitalize">
+      # {{ tag }}
+    </span>
+  </div>
 
-        </div>
+</div>
       </div>
 
 

@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
-
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.2s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem); /* 增加一点模糊效果，显得很高级 */
+  transform: translateY(10px);
+}
 
 /* 2. 定义字体文件 (注意路径和后缀必须对应) */
