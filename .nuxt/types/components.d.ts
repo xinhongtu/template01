@@ -21,6 +21,7 @@ interface _GlobalComponents {
   HeaderNavbar: typeof import("../../app/components/header/navbar.vue")['default']
   HeroBlock: typeof import("../../app/components/hero/block.vue")['default']
   PartnerBlock: typeof import("../../app/components/partner/block.vue")['default']
+  ProductInquiryModal: typeof import("../../app/components/product/InquiryModal.vue")['default']
   ProductBlock: typeof import("../../app/components/product/block.vue")['default']
   ProductCard: typeof import("../../app/components/product/card.vue")['default']
   ProductGallery: typeof import("../../app/components/product/gallery.vue")['default']
@@ -86,6 +87,7 @@ interface _GlobalComponents {
   LazyHeaderNavbar: LazyComponent<typeof import("../../app/components/header/navbar.vue")['default']>
   LazyHeroBlock: LazyComponent<typeof import("../../app/components/hero/block.vue")['default']>
   LazyPartnerBlock: LazyComponent<typeof import("../../app/components/partner/block.vue")['default']>
+  LazyProductInquiryModal: LazyComponent<typeof import("../../app/components/product/InquiryModal.vue")['default']>
   LazyProductBlock: LazyComponent<typeof import("../../app/components/product/block.vue")['default']>
   LazyProductCard: LazyComponent<typeof import("../../app/components/product/card.vue")['default']>
   LazyProductGallery: LazyComponent<typeof import("../../app/components/product/gallery.vue")['default']>

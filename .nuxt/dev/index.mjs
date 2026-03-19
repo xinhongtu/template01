@@ -3022,7 +3022,7 @@ const _y2Us98 = eventHandler(async (e) => {
 });
 
 const checksums = {
-  "products": "v3.5.0--aNEFaWpiOU3tb7b-zfZm6zC_sPAu733nUKPukgRFysk"
+  "products": "v3.5.0--I0vsgg5G9WmNwojuMehQoE59jOX2FLP-XeoBhVpDE14"
 };
 const checksumsStructure = {
   "products": "n5JQRVnYL0x8Hyos6t0Yj3QCkhLnUhPNPI5qTqJrpvA"

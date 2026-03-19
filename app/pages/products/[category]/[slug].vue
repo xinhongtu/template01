@@ -25,7 +25,7 @@
     <!-- 内容区：使用 v-if 确保数据加载后再渲染，防止报错 -->
     <div v-if="product" class="container mx-auto px-4 mt-10  z-20">
       <!-- 上方：产品图片画廊 -->
-      <div class="grid grid-cols-2 gap-8  mx-auto container px-4">
+      <div class="lg:grid grid-cols-2 gap-8  mx-auto container px-4">
 
         <!-- ProductGallery 区域 -->
         <div class="col-span-1">
@@ -33,56 +33,42 @@
         </div>
 
         <!-- 右侧区域 -->
-        <div class="flex flex-col space-y-8">
-      
-      <!-- 1. 信任标签与标题 -->
-      <div class="space-y-4">
-        <div class="flex items-center gap-2 text-sm">
-          <div class="flex text-yellow-400">★★★★★</div>
-          <span class="font-bold">4.4</span>
-          <a href="#" class="underline hover:text-blue-600">based on 4k+ Reviews</a>
-        </div>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-[#001151] leading-tight">
-          {{ product.title }}
-        </h1>
-        <ul class="space-y-3 pt-2">
-          <li v-for="item in product.benefits" :key="item" class="flex items-center gap-3">
-            <CheckCircle class="w-5 h-5 text-emerald-600" />
-            <span class="text-slate-700">{{ item }}</span>
-          </li>
-        </ul>
-      </div>
+        <div class="mt-20 lg:mt-0 flex flex-col space-y-8">
 
-      <!-- 2. 决策转化区 (CTA) -->
-      <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4">
-        <div class="flex items-start gap-3 text-sm text-slate-600">
-          <Info class="w-5 h-5 flex-shrink-0" />
-          <p>This treatment requires an assessment of your medical history by a professional provider.</p>
-        </div>
-        <button class="w-full bg-[#001151] hover:bg-blue-900 text-white font-bold py-4 rounded-xl transition-all shadow-lg active:scale-[0.98]">
-          Enroll Now — {{ product.price }}
-        </button>
-        <button class="w-full bg-white border-2 border-[#001151] text-[#001151] hover:bg-slate-50 font-bold py-4 rounded-xl transition-all">
-          See if You are Eligible
-        </button>
-        <a href="#" class="block text-center text-sm underline text-slate-500 hover:text-slate-900">Important safety information</a>
-      </div>
+          <!-- 1. 标题区域 -->
+          <h1 class="text-4xl md:text-5xl font-extrabold text-[#001151] leading-tight">
+            {{ product.title }}
+          </h1>
 
-      <!-- 3. 信息折叠区 (Accordion) -->
-      <div class="divide-y divide-slate-200 border-t border-slate-200">
-        <AccordionItem v-for="item in product.details" :key="item.title" :title="item.title" :content="item.content" />
-      </div>
+          <!-- 2. 价格区域 (仅当 price 存在时显示) -->
+          <div v-if="product.meta?.price" class="flex items-center gap-2 text-xl font-bold text-slate-800">
+            <Receipt class="w-6 h-6 text-[#001151]" />
+            <span>{{ product.meta?.price }}</span>
+          </div>
 
-      <!-- 4. 快速跳转标签 (Jump to) -->
-      <div class="pt-4">
-        <p class="text-sm font-bold text-slate-900 mb-3">Jump to:</p>
-        <div class="flex flex-wrap gap-2">
-          <button v-for="tag in product.tags" :key="tag" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 rounded-full text-sm font-medium transition-colors">
-            {{ tag }}
-          </button>
+          <!-- 3. 描述区域 -->
+          <p class="text-slate-700 text-lg leading-relaxed">
+            {{ product.description }}
+          </p>
+
+          <!-- 4. 决策转化区 (CTA) -->
+          <div class="space-y-3">
+            <button @click="isInquiryOpen = true"
+              class="w-full bg-[#001151] hover:bg-blue-900 text-white font-bold py-4 rounded-xl transition-all shadow-lg active:scale-[0.98]">
+              Send Inquiry
+            </button>
+          </div>
+
+          <!-- 5. 标签区域 (仅当 tags 存在且不为空时显示) -->
+          <div v-if="product.meta?.tags && product.meta?.tags.length > 0"
+            class="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
+            <span v-for="tag in product.meta?.tags" :key="tag"
+              class="px-3 py-1 bg-slate-100 text-slate-600 text-sm font-medium rounded-full">
+              {{ tag }}
+            </span>
+          </div>
+
         </div>
-      </div>
-    </div>
       </div>
 
 
@@ -106,12 +92,15 @@
       <h2 class="text-2xl font-bold text-slate-400">Product not found.</h2>
       <NuxtLink to="/" class="text-blue-500 mt-4 inline-block underline">Back to Home</NuxtLink>
     </div>
+    <!-- 放置弹窗组件 -->
+    <ProductInquiryModal :is-open="isInquiryOpen" :product-name="product?.title || 'Unknown Product'"
+      @close="isInquiryOpen = false" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ChevronRight, CheckCircle2, Send } from 'lucide-vue-next'
-
+import { ChevronRight, CheckCircle2, Send, Receipt } from 'lucide-vue-next'
+const isInquiryOpen = ref(false)
 const route = useRoute()
 const categoryName = route.params.category as string
 const slug = route.params.slug as string

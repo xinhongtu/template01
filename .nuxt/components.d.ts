@@ -21,6 +21,7 @@ export const FooterBlock: typeof import("../app/components/footer/block.vue")['d
 export const HeaderNavbar: typeof import("../app/components/header/navbar.vue")['default']
 export const HeroBlock: typeof import("../app/components/hero/block.vue")['default']
 export const PartnerBlock: typeof import("../app/components/partner/block.vue")['default']
+export const ProductInquiryModal: typeof import("../app/components/product/InquiryModal.vue")['default']
 export const ProductBlock: typeof import("../app/components/product/block.vue")['default']
 export const ProductCard: typeof import("../app/components/product/card.vue")['default']
 export const ProductGallery: typeof import("../app/components/product/gallery.vue")['default']
@@ -86,6 +87,7 @@ export const LazyFooterBlock: LazyComponent<typeof import("../app/components/foo
 export const LazyHeaderNavbar: LazyComponent<typeof import("../app/components/header/navbar.vue")['default']>
 export const LazyHeroBlock: LazyComponent<typeof import("../app/components/hero/block.vue")['default']>
 export const LazyPartnerBlock: LazyComponent<typeof import("../app/components/partner/block.vue")['default']>
+export const LazyProductInquiryModal: LazyComponent<typeof import("../app/components/product/InquiryModal.vue")['default']>
 export const LazyProductBlock: LazyComponent<typeof import("../app/components/product/block.vue")['default']>
 export const LazyProductCard: LazyComponent<typeof import("../app/components/product/card.vue")['default']>
 export const LazyProductGallery: LazyComponent<typeof import("../app/components/product/gallery.vue")['default']>
