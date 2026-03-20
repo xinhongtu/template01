@@ -47,6 +47,7 @@ export default defineNuxtConfig({
   },
  content: {
     // 关键点：这里的配置要精简
+    database: false,
     highlight: { theme: 'github-dark' }
   },
 })
