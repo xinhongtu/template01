@@ -45,22 +45,20 @@ export default defineNuxtConfig({
       isCustomElement: (tag) => ['count', 'scroll-reveal', 'scroll-group'].includes(tag)
     }
   },
-  nitro: {
-    preset: 'static'
-  },
+ 
 
   // 预渲染所有页面
   routeRules: {
     '/': { prerender: true },
-    '/products/**': { prerender: true },
-    '/about': { prerender: true },
-    // 禁用服务端内容API，避免 better-sqlite3 错误
-    '/__nuxt_content/**': { prerender: false }
+    '/products/**/**': { prerender: true },
   },
 
-  // 内容模块配置 - 构建时处理所有内容
+ nitro: {
+    preset: 'static'
+  },
+  
+  // 使用内存数据库（构建时有效，不依赖文件）
   content: {
-    // 使用内存数据库（构建时有效，运行时不依赖）
     database: {
       type: 'memory'
     }
