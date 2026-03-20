@@ -159,8 +159,15 @@ const siteConfig = ref({
 
 
 
+const navData = ref([])
 
-const { data: navData } = await useProductsNav()
+onMounted(async () => {
+    // 强制在客户端挂载后获取，避开 SSR 构建时的同步时序问题
+    const { data } = await useProductsNav()
+    if (data.value) {
+        navData.value = data.value
+    }
+})
 // 2. 确保计算属性安全读取
 const navItems = computed(() => {
     // 1. 安全获取数据

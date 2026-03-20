@@ -41,16 +41,8 @@ export default defineNuxtConfig({
   },
   vue: {
     compilerOptions: {
-      directiveTransforms: {
-        'scroll-reveal': () => ({
-          props: [],
-          needRuntime: true,
-        }),
-        'scroll-group': () => ({
-          props: [],
-          needRuntime: true,
-        }),
-      },
-    },
-  },
+      // 告诉 Vue 忽略这些自定义指令，不要报错
+      isCustomElement: (tag) => ['count', 'scroll-reveal', 'scroll-group'].includes(tag) 
+    }
+  }
 })
