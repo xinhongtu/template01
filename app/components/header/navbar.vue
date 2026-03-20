@@ -159,15 +159,7 @@ const siteConfig = ref({
 
 
 
-const navData = ref([])
-
-onMounted(async () => {
-    // 强制在客户端挂载后获取，避开 SSR 构建时的同步时序问题
-    const { data } = await useProductsNav()
-    if (data.value) {
-        navData.value = data.value
-    }
-})
+const { data: navData } = await useProductsNav()
 // 2. 确保计算属性安全读取
 const navItems = computed(() => {
     // 1. 安全获取数据
@@ -232,7 +224,7 @@ onMounted(async () => {
         if (response.ok) {
             const data = await response.json()
             siteConfig.value = { ...siteConfig.value, ...data }
-            console.log('siteConfig.value',siteConfig.value)    
+           // console.log('siteConfig.value',siteConfig.value)    
         }
     } catch (e) {
         console.warn("Setting.json not found")

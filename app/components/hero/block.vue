@@ -7,6 +7,7 @@
         </div>
 
         <!-- Content -->
+         <ClientOnly>
         <div v-scroll-group class="container mx-auto px-4 relative z-10 text-center">
             <!-- Welcome Text -->
             <div
@@ -76,6 +77,7 @@
                 </div>
             </div>
         </div>
+        </ClientOnly>
     </section>
 </template>
 
