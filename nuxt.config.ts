@@ -44,5 +44,18 @@ export default defineNuxtConfig({
       // 告诉 Vue 忽略这些自定义指令，不要报错
       isCustomElement: (tag) => ['count', 'scroll-reveal', 'scroll-group'].includes(tag) 
     }
+  },
+  content: {
+    // 强制使用静态模式，禁止在生产环境尝试连接数据库
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'github-dark'
+        }
+      }
+    }
+  },
+  nitro: {
+    preset: 'vercel',
   }
 })
