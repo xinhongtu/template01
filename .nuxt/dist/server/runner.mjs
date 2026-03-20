@@ -1,1 +1,1 @@
-export { default } from "file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/@nuxt+vite-builder@4.4.2_@babel+plugin-syntax-jsx@7.28.6_@babel+core@7.29.0__lightningc_60162303dbf2003201e649f20147e558/node_modules/@nuxt/vite-builder/dist/vite-node-runner.mjs"
+export { default } from "file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/@nuxt+vite-builder@3.21.2_lightningcss@1.32.0_magicast@0.5.2_nuxt@3.21.2_@parcel+watche_3634535f1f56ff2ae10252c108a7ee79/node_modules/@nuxt/vite-builder/dist/vite-node-runner.mjs"

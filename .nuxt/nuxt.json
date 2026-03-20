@@ -1,9 +1,9 @@
 {
-  "_hash": "kAop0KG62GrRaP2eiuVfh2F5YNsLH1vvRWr7Q_tPchQ",
+  "_hash": "bnuSwHNsQoOQxd1GD8QPS5YTl4mIwE6w3ANHsspx1Iw",
   "project": {
     "rootDir": "/Users/zhuenxi/Documents/trae_projects/nuxt-2026-001"
   },
   "versions": {
-    "nuxt": "4.4.2"
+    "nuxt": "3.21.2"
   }
 }

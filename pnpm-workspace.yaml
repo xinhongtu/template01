@@ -1,2 +1,6 @@
 allowBuilds:
   better-sqlite3: false
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - better-sqlite3
+  - esbuild
