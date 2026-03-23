@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # 告诉搜索引擎你的 sitemap 在哪里（把 example.com 换成你真实的域名）
-Sitemap: https://www.yunnanjia.com/sitemap.xml
+Sitemap: https://www.yoursite.com/sitemap.xml

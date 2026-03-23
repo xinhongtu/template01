@@ -1,12 +1,10 @@
 import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { tmpdir } from 'node:os';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getQuery as getQuery$1, readBody, getRequestProtocol, getRequestHost, setHeader, getHeader, getRouterParam, getResponseStatus, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, setCookie, getCookie, deleteCookie, getResponseStatusText } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/h3@1.15.9/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getQuery as getQuery$1, readBody, getRequestProtocol, getRequestHost, setHeader, getHeader, getRouterParam, getResponseStatus, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatusText } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/h3@1.15.9/node_modules/h3/dist/index.mjs';
 import { Server } from 'node:http';
 import { resolve as resolve$1, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
 import { escapeHtml } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/@vue+shared@3.5.30/node_modules/@vue/shared/dist/shared.cjs.js';
-import svgCaptcha from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/svg-captcha@1.4.0/node_modules/svg-captcha/index.js';
-import nodemailer from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/nodemailer@8.0.3/node_modules/nodemailer/lib/nodemailer.js';
 import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/vue-bundle-renderer@2.2.0/node_modules/vue-bundle-renderer/dist/runtime.mjs';
 import { parseURL, withoutBase, joinURL, getQuery, withQuery, hasProtocol, withHttps, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, joinRelativeURL, parsePath, stringifyQuery, parseQuery, encodePath, stringifyParsedURL, withBase } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/ufo@1.6.3/node_modules/ufo/dist/index.mjs';
 import destr, { destr as destr$1 } from 'file:///Users/zhuenxi/Documents/trae_projects/nuxt-2026-001/node_modules/.pnpm/destr@2.0.5/node_modules/destr/dist/index.mjs';
@@ -662,7 +660,7 @@ const _inlineRuntimeConfig = {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-03-22T23:55:07.861Z"
+          "X-Sitemap-Prerendered": "2026-03-23T07:06:52.373Z"
         }
       },
       "/_nuxt/builds/meta/**": {
@@ -5707,14 +5705,10 @@ const _J3rP3v = eventHandler(async (event) => {
   return loadDatabaseAdapter(conf).all(sql);
 });
 
-const _lazy_AQjBHJ = () => Promise.resolve().then(function () { return captcha_get$1; });
-const _lazy_9dtt__ = () => Promise.resolve().then(function () { return submit_post$1; });
 const _lazy_OvO2Ec = () => Promise.resolve().then(function () { return renderer; });
 
 const handlers = [
   { route: '', handler: _uOd3Gv, lazy: false, middleware: true, method: undefined },
-  { route: '/api/captcha', handler: _lazy_AQjBHJ, lazy: true, middleware: false, method: "get" },
-  { route: '/api/submit', handler: _lazy_9dtt__, lazy: true, middleware: false, method: "post" },
   { route: '/__nuxt_error', handler: _lazy_OvO2Ec, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: handler$1, lazy: false, middleware: false, method: undefined },
   { route: '', handler: _R4mCjX, lazy: false, middleware: true, method: undefined },
@@ -6003,94 +5997,6 @@ const sources = {};
 const childSources = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   sources: sources
-}, Symbol.toStringTag, { value: 'Module' }));
-
-const captcha_get = defineEventHandler((event) => {
-  const captcha = svgCaptcha.create({
-    size: 4,
-    // 4位验证码
-    ignoreChars: "0o1i",
-    // 排除容易混淆的字符
-    noise: 2,
-    // 干扰线
-    color: true,
-    background: "#f8fafc"
-    // 匹配你 UI 的浅灰色背景
-  });
-  setCookie(event, "captcha_text", captcha.text.toLowerCase(), {
-    maxAge: 300,
-    httpOnly: true,
-    path: "/"
-  });
-  return {
-    svg: captcha.data
-    // 返回 SVG 字符串
-  };
-});
-
-const captcha_get$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  default: captcha_get
-}, Symbol.toStringTag, { value: 'Module' }));
-
-const submit_post = defineEventHandler(async (event) => {
-  if (event.method !== "POST") {
-    throw createError({ statusCode: 405, message: "\u4E0D\u652F\u6301\u6B64\u65B9\u6CD5" });
-  }
-  const config = useRuntimeConfig();
-  const body = await readBody(event);
-  const { name, phone, origin, needs, message, captcha } = body;
-  const savedCaptcha = getCookie(event, "captcha_text");
-  if (!captcha || captcha.toLowerCase() !== savedCaptcha) {
-    throw createError({ statusCode: 400, statusMessage: "\u9A8C\u8BC1\u7801\u9519\u8BEF\u6216\u5DF2\u8FC7\u671F" });
-  }
-  deleteCookie(event, "captcha_text");
-  if (!name || !phone) {
-    throw createError({ statusCode: 400, statusMessage: "\u8BF7\u586B\u5199\u5B8C\u6574\u4FE1\u606F" });
-  }
-  console.log("--- \u73AF\u5883\u53D8\u91CF\u8C03\u8BD5 ---");
-  console.log("User exists:", !!config.emailUser);
-  console.log("Pass exists:", !!config.emailPass);
-  const transporter = nodemailer.createTransport({
-    host: "smtp.qq.com",
-    port: 465,
-    secure: true,
-    auth: {
-      user: config.emailUser,
-      // .env 中的 QQ 邮箱
-      pass: config.emailPass
-      // .env 中的授权码
-    }
-  });
-  const mailOptions = {
-    from: `"\u6EC7\u7C4D\u52B3\u52A1\u6C42\u52A9" <${config.emailUser}>`,
-    to: "zxm@hidaddy.com.cn",
-    subject: `\u3010\u65B0\u6C42\u52A9\u7533\u8BF7\u3011\u6765\u81EA${origin}\u7684${name}`,
-    html: `
-      <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee; border-radius: 15px;">
-        <h2 style="color: #059669;">\u6536\u5230\u65B0\u7684\u52B3\u52A1\u5DE5\u53CB\u6C42\u52A9\u7533\u8BF7</h2>
-        <p><strong>\u59D3\u540D\uFF1A</strong> ${name}</p>
-        <p><strong>\u7535\u8BDD\uFF1A</strong> <a href="tel:${phone}">${phone}</a></p>
-        <p><strong>\u5BB6\u4E61\uFF1A</strong> ${origin}</p>
-        <p><strong>\u9700\u6C42\uFF1A</strong> ${Array.isArray(needs) ? needs.join("\u3001") : needs}</p>
-        <p><strong>\u5177\u4F53\u60C5\u51B5\uFF1A</strong> ${message || "\u65E0"}</p>
-        <hr style="border: none; border-top: 1px solid #eee;" />
-        <p style="font-size: 12px; color: #999;">\u6B64\u90AE\u4EF6\u7531\u201C\u6EC7\u7C4D\u52B3\u52A1\u5173\u7231\u7AD9\u201D\u7CFB\u7EDF\u81EA\u52A8\u53D1\u9001</p>
-      </div>
-    `
-  };
-  try {
-    await transporter.sendMail(mailOptions);
-    return { success: true };
-  } catch (error) {
-    console.error("SMTP Error:", error);
-    throw createError({ statusCode: 500, statusMessage: "\u90AE\u4EF6\u53D1\u9001\u5931\u8D25" });
-  }
-});
-
-const submit_post$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  default: submit_post
 }, Symbol.toStringTag, { value: 'Module' }));
 
 function renderPayloadResponse(ssrContext) {

@@ -14,7 +14,7 @@ export const useProductsNav = async () => {
     try {
       // 1. 获取所有产品
       const allProducts = await queryCollection('products').all()
-      console.log('allProducts!!:', allProducts)
+      //console.log('allProducts!!:', allProducts)
       // 2. 提取分类 (根据路径 /products/category/slug)
       const categoriesMap = new Map()
       
