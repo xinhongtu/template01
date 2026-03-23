@@ -1,23 +1,18 @@
-# Nuxt Content Starter
+# 普通用户模板使用方法
 
-Look at the [Nuxt Content documentation](https://content.nuxt.com) to learn more.
-
-## Setup
+使用方法请访问：[老爹模板DaddyTemplate 文档](https://www.daddytemplate.com/dev-docs)
+如需要部署服务以及配置服务(¥199.00),可直接和我取得联系13656617631
+## 开发者使用方法
 
 Make sure to install dependencies:
 
 ```bash
-# npm
-npm install
+
 
 # pnpm
 pnpm install
 
-# yarn
-yarn install
 
-# bun
-bun install
 ```
 
 ## Development Server
@@ -73,5 +68,4 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-# yunnanjia
-# template01
+

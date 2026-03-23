@@ -640,6 +640,12 @@ const _inlineRuntimeConfig = {
       "/__nuxt_error": {
         "cache": false
       },
+      "/": {
+        "prerender": true
+      },
+      "/products/**/**": {
+        "prerender": true
+      },
       "/__nuxt_content/**": {
         "robots": false,
         "cache": false
@@ -652,7 +658,13 @@ const _inlineRuntimeConfig = {
           "Content-Type": "application/xslt+xml"
         }
       },
-      "/sitemap.xml": {},
+      "/sitemap.xml": {
+        "headers": {
+          "Content-Type": "text/xml; charset=UTF-8",
+          "Cache-Control": "public, max-age=600, must-revalidate",
+          "X-Sitemap-Prerendered": "2026-03-22T23:55:07.861Z"
+        }
+      },
       "/_nuxt/builds/meta/**": {
         "headers": {
           "cache-control": "public, max-age=31536000, immutable"
@@ -662,6 +674,9 @@ const _inlineRuntimeConfig = {
         "headers": {
           "cache-control": "public, max-age=1, immutable"
         }
+      },
+      "//_payload.json": {
+        "prerender": true
       },
       "/__nuxt_content/products/sql_dump.txt/_payload.json": {
         "prerender": true
@@ -5976,43 +5991,7 @@ const styles$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   default: styles
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const sources$1 = [
-    {
-        "context": {
-            "name": "@nuxt/content@v3:urls",
-            "description": "Generated from your markdown files.",
-            "tips": [
-                "Parsing the following collections: "
-            ]
-        },
-        "fetch": "/__sitemap__/nuxt-content-urls.json",
-        "sourceType": "app"
-    },
-    {
-        "context": {
-            "name": "nuxt:pages",
-            "description": "Generated from your static page files.",
-            "tips": [
-                "Can be disabled with `{ excludeAppSources: ['nuxt:pages'] }`."
-            ]
-        },
-        "urls": [
-            {
-                "loc": "/about"
-            },
-            {
-                "loc": "/"
-            },
-            {
-                "loc": "/contact"
-            },
-            {
-                "loc": "/products"
-            }
-        ],
-        "sourceType": "app"
-    }
-];
+const sources$1 = [];
 
 const globalSources = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
