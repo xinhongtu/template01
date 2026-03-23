@@ -68,7 +68,10 @@
 import { useForm } from 'vee-validate';
 import { contactSchema } from '~/utils/validation';
 import { Loader2 } from 'lucide-vue-next';
+const config = useRuntimeConfig()
 
+// 获取这个 key
+const accessKey = config.public.web3FormsKey
 const props = defineProps<{ isOpen: boolean; productName: string }>()
 const emit = defineEmits(['close'])
 const toast = useToast()
@@ -93,7 +96,7 @@ const onSubmit = handleSubmit(
     async (values) => {
         console.log('提交触发，配置项:', siteConfig.value);
 
-        const accessKey = siteConfig.value.contact?.web3FormsKey;
+        
 
         if (!accessKey) {
             toast.error('Configuration not loaded yet, please try again.');

@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+
   vite: {
     optimizeDeps: {
       include: [
@@ -38,6 +39,10 @@ export default defineNuxtConfig({
     // 只有在服务端可以访问
     emailUser: process.env.NUXT_EMAIL_USER,
     emailPass: process.env.NUXT_EMAIL_PASS,
+    // public 里的内容可以在前端（浏览器）访问
+    public: {
+      web3FormsKey: process.env.WEB3FORMS_KEY 
+    }
   },
   vue: {
     compilerOptions: {

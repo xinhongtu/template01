@@ -660,7 +660,7 @@ const _inlineRuntimeConfig = {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-03-23T07:06:52.373Z"
+          "X-Sitemap-Prerendered": "2026-03-23T07:21:44.472Z"
         }
       },
       "/_nuxt/builds/meta/**": {
@@ -682,6 +682,7 @@ const _inlineRuntimeConfig = {
     }
   },
   "public": {
+    "web3FormsKey": "6fba6186-2858-4c1f-8838-34586a330ee3",
     "mdc": {
       "components": {
         "prose": true,

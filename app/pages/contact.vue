@@ -121,7 +121,10 @@ import { ref, onMounted } from 'vue'
 import { Mail, Phone, MapPin, Send, Loader2 } from 'lucide-vue-next'
 import { useForm } from 'vee-validate';
 import { contactSchema } from '~/utils/validation';
+const config = useRuntimeConfig()
 
+// 获取这个 key
+const accessKey = config.public.web3FormsKey
 const toast = useToast();
 const siteConfig = ref<any>({ contact: {} })
 
@@ -143,7 +146,7 @@ const [message, messageAttrs] = defineField('message',{validateOnModelUpdate: fa
 
 // 2. 封装发送逻辑
 const onSubmit = handleSubmit(async (values) => {
-    const accessKey = siteConfig.value.contact?.web3FormsKey;
+    
 
     try {
         const response = await fetch("https://api.web3forms.com/submit", {

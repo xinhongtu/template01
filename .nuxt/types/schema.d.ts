@@ -110,6 +110,8 @@ import { NuxtModule, ModuleDependencyMeta } from '@nuxt/schema'
    },
   }
   interface SharedPublicRuntimeConfig {
+   web3FormsKey: string,
+
    mdc: {
       components: {
          prose: boolean,
