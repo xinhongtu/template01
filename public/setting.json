@@ -7,11 +7,11 @@
   },
   "logo": {
     "logoUrl": "/img/logo2.svg",
-    "logoName": "Your Logo"
+    "logoName": ""
   },
   "hero": {
     "welcomeText": "Hello Word",
-    "mainHeading": "Your Global Business Journey Starts Here!",
+    "mainHeading": "欢迎来到老爹模板 www.daddytemplate.com",
     "subtitle": "We exist to help your financial journey from start to finish. Just tell us your goals and we make it happen.",
     "ctaButton": "Discover our products",
     "secondaryButton": "Contact us",
