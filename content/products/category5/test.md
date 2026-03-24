@@ -1,0 +1,101 @@
+---
+title: "测试商品！！"
+price: "$9,999"
+image: "/img/p7.webp"
+firstImage: ["/img/p7.webp", "/img/p2.webp", "/img/p3.webp", "/img/p4.webp", "/img/p5.webp", "/img/p6.webp", "/img/p1.webp", "/img/p8.webp"]
+description: "为了测试你的页面（标题、价格、描述、CTA、标签、以及 Markdown 详情），我为你准备了一个模拟的 MD 数据结构。你可以将此结构放入你的 content/products 文件夹中（如果是 Nuxt Content）"
+tags: ["Tags1","Tags2","Tags3"]
+---
+# 产品详情页撰写指南
+**因为用户所处行业不同，模板不能满足所有用户的需求。如需精准定制，[请联系我们的商务](https://www.daddytemplate.com/contact)** <br><br><br>
+
+
+欢迎使用 **老爹模板 (DaddyTemplate.com)**！为了让您的产品详情页既专业又美观，请参考以下 Markdown 格式规范进行编辑。请在文件工程中找到content文件夹下的products文件夹，找到您的产品分类文件夹，例如category1，找到您的产品文件，例如4.md，打开它进行编辑。
+
+> **提示：** Markdown 是一种轻量级标记语言，不需要任何代码知识，只需简单的符号即可实现排版。学习成本相当低，您可以在很短的时间内掌握它。当你有一段特别重要的技术参数、注意事项或专家的操作建议时，用引用块把它从大段的正文中"拎"出来。就如同你现在看到的这个块引用一样。
+> <br>
+**老爹模板 DaddyTemplate.com**
+
+---
+
+## 1. 标题与正文
+
+使用 `#` 号控制标题大小，通常一级标题 `#` 用于页面名称，二级 `##` 用于模块分类，三级 `###` 用于更细致的分类。
+
+**示例：**
+
+
+## 二级标题（模块名，如：技术参数）
+### 三级标题（子分类）
+#### 四级标题（子分类）
+
+这里是正常的正文内容，直接输入文字即可。
+
+---
+
+
+
+## 2.列表 (Lists)
+列表是展示产品优势的最好方式，建议多使用列表而非长段落。<br>
+无序列表 (使用 * 或 -)
+* **强劲动力：** 采用最新一代液压系统，效率提升15%。
+* **环保节能：** 完全符合全球排放标准。
+* **操作舒适：** 全新驾驶室设计，噪音降低20%。
+
+有序列表 (使用 1. 2. 3. 等)
+1. 专业服务： 提供24小时专业技术支持。
+2. 质量保障： 所有产品均经过严格测试，质量 guaranteed。
+
+---
+
+
+## 3. 表格 (Tables)
+表格用于展示参数对比，这是 Markdown 中最结构化的部分。
+| 套餐 (Feature) | 价格 (Price) |
+| :--- | :--- |
+| **免费版** | $0 |
+| **Vercle部署** | ¥199.00 |
+| **定制网站** | 请联系我们的商务 |
+
+---
+
+
+## 4. 图片插入与标注
+图片格式为 ```![描述](图片链接)```。建议在下方使用 ```*斜体* ```作为图片标题。
+![挖掘机工作现场](https://the7.io/fse-corporate/wp-content/uploads/sites/142/2024/07/landsc-3x2-m410.webp)
+*说明：这是产品在施工现场的实际作业图。*
+
+---
+
+
+## 5. 视频嵌入
+为了获得最佳展示效果，请使用以下代码块嵌入 YouTube 或视频链接：<br>
+下面的视频引用Youtube视频,如无法显示观看，请检查自己的网络环境,保证科学上网状态
+<div class="aspect-video w-full rounded-xl overflow-hidden  my-8">
+  <iframe 
+    class="w-full h-full"
+    src="https://www.youtube.com/embed/fTtakdyygNg?si=jM7Qn_18RW_MSI4O" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+---
+
+
+## 写作小贴士 (Pro Tips)
+* 多用短句： 详情页用户通常是“扫读”，请尽量使用列表代替长段落。
+* 图文并茂： 每 300 字建议配合一张高质量实拍图。
+* 参数对齐： 在表格中，尽量统一参数单位，方便用户阅读。
+* 链接检查： 确保所有的图片链接都能在浏览器直接打开，否则页面无法显示图片。
+
+
+
+
+> 遇到问题？
+如果您在撰写过程中遇到排版困惑，请访问[老爹模板DaddyTemplate.com](https://www.daddytemplate.com) 获取最新的模板支持。
+
+
+
+
