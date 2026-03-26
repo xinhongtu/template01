@@ -18,7 +18,7 @@ jobs:
 
       - name: Install and Build
         run: |
-          npm install
+          npm install --legacy-peer-deps
           npm run generate # 生成静态文件到 .output/public
 
       - name: Setup ossutil
