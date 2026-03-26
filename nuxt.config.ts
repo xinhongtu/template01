@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
+  runtimeConfig: {
+    // public 里的内容可以在前端（浏览器）访问
+    public: {
+      web3FormsKey: process.env.WEB3FORMS_KEY
+    }
+  },
   vite: {
     optimizeDeps: {
       include: [
@@ -11,6 +16,7 @@ export default defineNuxtConfig({
     }
   },
   app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       link: [
@@ -39,10 +45,6 @@ export default defineNuxtConfig({
     // 只有在服务端可以访问
     emailUser: process.env.NUXT_EMAIL_USER,
     emailPass: process.env.NUXT_EMAIL_PASS,
-    // public 里的内容可以在前端（浏览器）访问
-    public: {
-      web3FormsKey: process.env.WEB3FORMS_KEY 
-    }
   },
   vue: {
     compilerOptions: {
@@ -50,7 +52,7 @@ export default defineNuxtConfig({
       isCustomElement: (tag) => ['count', 'scroll-reveal', 'scroll-group'].includes(tag)
     }
   },
- 
+
 
   // 预渲染所有页面
   routeRules: {
@@ -58,9 +60,9 @@ export default defineNuxtConfig({
     '/products/**/**': { prerender: true },
   },
 
- nitro: {
+  nitro: {
     preset: 'static'
   },
-  
+
 
 })

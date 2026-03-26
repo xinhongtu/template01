@@ -19,7 +19,7 @@ jobs:
       - name: Install and Build
         run: |
           npm install --legacy-peer-deps
-          npm run generate # 生成静态文件到 .output/public
+          NUXT_APP_BASE_URL=/previews/${{ github.event.repository.name }}/ npm run generate
 
       - name: Setup ossutil
         uses: manyuanrong/setup-ossutil@v2.0
